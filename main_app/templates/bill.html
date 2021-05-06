@@ -1,0 +1,136 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="{% static '/main_app/css/invoice.css' %}" media="all" />
+    {% comment %} <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> {% endcomment %}
+  <style>
+  #x1
+  {
+    height:40px;
+    width:110px;
+    color:white;
+
+    background: #57B223;
+  }
+  #a1
+  {
+    color:white;
+  }
+  #x2
+  {
+    height:30px;
+    width:110px;
+    color:white;
+    background: blue;
+  }
+  </style>
+  </head>
+  <body>
+
+    <header class="clearfix">
+      <div id="logo">
+        <img src="{% static '/main_app/images/logo.png' %}">
+      </div>
+      <div id="company">
+        <h2 class="name"><b>Motor Work</b></h2>
+        <div>2nd Floor,Gujarat Bhavan,Ellis Bridge </div>
+        <div>+91-8511119796</div>
+        <div><a href="mailto:motorworkexpert@gmail.com">motorworkexpert@gmail.com</a></div>
+      </div>
+      </div>
+    </header>
+    <main>
+    {% if all_user %}
+    {% if done %}
+      <div id="details" class="clearfix">
+        <div id="client">
+          <div class="to">INVOICE TO:</div>
+          <h2 class="name">{{all_user.username}}</h2>
+          <div class="address">{{all_user.useraddress}}</div>
+          <div class="email"><a href="mailto:{{all_user.usermail}}">{{all_user.usermail}}</a></div>
+           <div class="email"><a href="tel:+918511119796">8511119796</a></div>
+        </div>
+      {% endif %}
+        <div id="invoice">
+          <h1>INVOICE 3-2-1</h1>
+          <strong><p>Invoice for : {{done.ser_number}}</p></strong>
+          <div class="date">
+          <p><b>Date of Invoice:
+          <script> document.write(new Date().toLocaleDateString()); </script>
+          </b></p>
+          </div>
+          {% comment %} <div class="date">Due Date: 30/06/2014</div> {% endcomment %}
+        </div>
+      </div>
+      <table border="1px" cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th class="no">#</th>
+            <th class="desc">DESCRIPTION</th>
+            <th class="unit">UNIT PRICE</th>
+            <th class="qty">QUANTITY</th>
+            <th class="total">TOTAL</th>
+          </tr>
+        </thead>
+        {% if d %}
+        {% for a,b in d.items %}
+        <tbody>
+          <tr>
+            <td class="no">{{a}}</td>
+            <td class="desc"><h3>{{b}}</h3></td>
+            <td class="unit">₹200.00</td>
+            <td class="qty">1</td>
+            <td class="total">₹200.00</td>
+          </tr>
+          {% endfor %}
+    {% endif %}
+        </tbody>
+        
+        <tfoot>
+        {% if discount %}
+          <tr>
+          
+            <td colspan="2"></td>
+            <td colspan="2">Membership Discount</td>
+            <td>₹{{discount}}</td>
+          </tr>
+          {% endif %}
+          
+          <tr>
+          {% if total %}
+            <td colspan="2"></td>
+            <td colspan="2">GRAND TOTAL</td>
+            <td>₹{{total}}</td>
+          </tr>
+          {% endif %}
+          
+        </tfoot>
+      </table>
+      
+      <div id="thanks">
+      {% comment %} {{val}} {% endcomment %}
+      
+      Thank you!
+     
+      </div>
+      <div id="notices" align="center">
+        <button id="x1"><a id="a1" href="{% url 'paybill' pk=done.id %}">Pay Bill</a></button>
+        <button id="x1"><a id="a1" href="{% url 'pdfgenerate' pk=done.id %}">Generate PDF</a></button>
+      </div>
+    </main>
+    {% endif %}
+    <div class="container">
+  {% comment %} <h1>Keyboard Inputs</h1>
+  <p>To indicate input that is typically entered via the keyboard, use the kbd element:</p> {% endcomment %}
+  {% comment %} <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p> {% endcomment %}
+  {% comment %} <button onclick="window.print()" id="x2">Print or PDF</button> {% endcomment %}
+  
+</div>
+    <footer>
+      Invoice was created on a computer and is valid without the signature and seal.
+    </footer>
+  </body>
+</html>

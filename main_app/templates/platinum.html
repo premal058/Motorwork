@@ -1,0 +1,327 @@
+{% extends 'base_page.html' %}
+{% block content %}
+{% load static %}
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static '/main_app/images/background/8.jpg' %});">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <h1>Platinum membership</h1>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li>services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- Services Section -->
+    <section class="services-page-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+               <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-1.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Basic Maintain</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-electrical"></span>
+                                <h4><a href="service-detail.html">Basic Maintain</a></h4>
+                            </div>
+                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+               <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-2.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Wash & Polish</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-pistons"></span>
+                                <h4><a href="service-detail.html">Wash & Polish</a></h4>
+                            </div>
+                            <p>We should have to regularly wash and polish our vehicle to keep it clean and shine.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+             <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-3.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Engine Oil & Brake Oil</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-cogwheel"></span>
+                                <h4><a href="service-detail.html">Engine Oil & Brake Oil</a></h4>
+                            </div>
+                            <p>We have to change our vehicle's engine oil and brake oil to maintain average and smoothing of vehicle and brake.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+                                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-4.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Battery Service</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-electrical"></span>
+                                <h4><a href="service-detail.html">Battery Service</a></h4>
+                            </div>
+                            <p>We have to service our battery so that we can not face any breakdown due to battery.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-5.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Tire Servicing</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-pistons"></span>
+                                <h4><a href="service-detail.html">Tire Servicing</a></h4>
+                            </div>
+                            <p>For not having puncture or less air proble or any problem related to tire is not accepted.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-6.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Suspension repair</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-cogwheel"></span>
+                                <h4><a href="service-detail.html">Suspension repair</a></h4>
+                            </div>
+                            <p>The suspension should be oiled and fix when there is any type of problem in it.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <div align="center">
+       <a href="{% url 'membershipform' %}" class="theme-btn btn-style-two">Apply for membership</a>
+     </div>
+            <!-- Styled Pagination -->
+          
+    </section>
+    <!-- End Services Section -->
+
+
+    <!--Clients Section-->
+    <section class="clients-section alternate">
+        <div class="auto-container">
+            <div class="sponsors-outer">
+                <!--Sponsors Carousel-->
+                <ul class="sponsors-carousel owl-carousel owl-theme">
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/1.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/2.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/3.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/4.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/5.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/1.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/2.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/3.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/4.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="{% static '/main_app/images/clients/5.png' %}" alt=""></a></figure></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Clients Section-->
+    {% endblock %}  
+{% comment %} 
+    <!-- Main Footer -->
+    <footer class="main-footer" style="background-image: url({% static '/main_app/images/background/4.jpg' %});">
+        <div class="auto-container">
+
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget about-widget">
+                            <div class="footer-logo">
+                                <figure>
+                                    <a href="index.html"><img src="{% static '/main_app/images/footer-logo.png' %}" alt=""></a>
+                                </figure>
+                            </div>
+                            <div class="widget-content">
+                                <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
+                                <h4>Follow Us:</h4>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget services-widget">
+                            <h2 class="widget-title">Our Services</h2>
+                            <div class="widget-content">
+                                <ul class="services-list">
+                                    <li><a href="#">Engine Diagnostic & Repair</a></li>
+                                    <li><a href="#">Maintanence Inspaection</a></li>
+                                    <li><a href="#">Electrical System Diagnostic</a></li>
+                                    <li><a href="#">Wheel Allignment & Installation</a></li>
+                                    <li><a href="#">Air Conditioner Service & Repair</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <!--Footer Column-->
+                        <div class="footer-widget gallery-widget">
+                            <h2 class="widget-title">Instragram</h2>
+                             <!--Footer Column-->
+                            <div class="widget-content">
+                                <div class="outer clearfix">
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-1.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-2.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-3.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-3.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-4.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-4.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/news-1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-5.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/news-2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-6.jpg' %}" alt=""></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <!--Footer Column-->
+                        <div class="footer-widget news-widget">
+                            <h2 class="widget-title">Latest News</h2>
+                             <!--Footer Column-->
+                            <div class="widget-content">
+                                <div class="post">
+                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
+                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
+                                </div>
+
+                                <div class="post">
+                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
+                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Bottom-->
+         <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="copyright-text">
+                    <p>Copyrights © 2019 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+
+<!-- Color Palate / Color Switcher -->
+<div class="color-palate">
+    <div class="color-trigger">
+        <i class="fa fa-cog"></i>
+    </div>
+    <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+    </div>
+    <div class="various-color clearfix">
+        <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="{% static '/main_app/css/color-themes/default-theme.css' %}"></span>
+            <span class="palate green-color" data-theme-file="{% static '/main_app/css/color-themes/green-theme.css' %}"></span>
+            <span class="palate yellow-color" data-theme-file="{% static '/main_app/css/color-themes/blue-theme.css' %}"></span>
+            <span class="palate orange-color" data-theme-file="{% static '/main_app/css/color-themes/orange-theme.css' %}"></span>
+            <span class="palate purple-color" data-theme-file="{% static '/main_app/css/color-themes/purple-theme.css' %}"></span>
+            <span class="palate teal-color" data-theme-file="{% static '/main_app/css/color-themes/teal-theme.css' %}"></span>
+            <span class="palate brown-color" data-theme-file="{% static '/main_app/css/color-themes/brown-theme.css' %}"></span>
+            <span class="palate redd-color" data-theme-file="{% static '/main_app/css/color-themes/redd-color.css' %}"></span>
+        </div>
+    </div>
+    <ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li></ul>
+    <a href="#" class="purchase-btn">Purchase now $15</a>
+
+    <div class="palate-foo">
+        <span>You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.</span>
+    </div>
+</div>
+
+<script src="{% static '/main_app/js/jquery.js' %}"></script>
+<script src="{% static '/main_app/js/popper.min.js' %}"></script>
+<script src="{% static '/main_app/js/bootstrap.min.js' %}"></script>
+<script src="{% static '/main_app/js/jquery-ui.js' %}"></script>
+<script src="{% static '/main_app/js/jquery.fancybox.js' %}"></script>
+<script src="{% static '/main_app/js/owl.js' %}"></script>
+<script src="{% static '/main_app/js/appear.js' %}"></script>
+<script src="{% static '/main_app/js/wow.js' %}"></script>
+<script src="{% static '/main_app/js/mixitup.js' %}"></script>
+<script src="{% static '/main_app/js/script.js' %}"></script>
+<script src="{% static '/main_app/js/color-settings.js' %}"></script>
+</body>
+
+<!-- Mirrored from expert-themes.com/html/motor-expert/services.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 07:20:10 GMT -->
+</html> {% endcomment %}

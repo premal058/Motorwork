@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Motor Expert - Auto Repair & Service HTML Template | Home Page</title>
+    {% comment %} <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> {% endcomment %}
+    <!-- Font Icon -->  
+    <link rel="stylesheet" href="{% static '/main_app/sellerform/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" href="{% static '/main_app/sellerform/vendor/nouislider/nouislider.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static '/main_app/sellerform/css/style.css' %}">
+
+    <style>
+        span
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                      <img src="{% static '/main_app/sellerform/images/x7.jpg' %}" style="height:80%; ">
+                    <div class="signup-img-content">
+                        {% comment %} <h2>Register your vehicle now </h2> {% endcomment %}
+                        {% comment %} <p>while seats are available !</p> {% endcomment %}
+                    </div>
+                </div>
+              
+                <div class="signup-form"><br>
+                <center><a href="{% url 'homepage' %}"><button class="submit" style="width:300px;">Back to Homepage</button></a></center>      
+                    <form method="POST" action="{% url 'vehiclesell' %}" class="register-form" id="register-form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="form-input">
+                                <label class="required">Registered Number Plate</label>
+                                <input type="text" name="regnp" id="first_name" />
+                                <span id="sell_veh_no_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label class="required">Model Name</label>
+                                <input type="text" name="vname" id="model_no" />
+                                <span id="model_no_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="company" class="required">Company</label>
+                                <input type="text" name="comp" id="Company" />
+                                <span id="veh_comp_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="email" class="required">Email</label>
+                                <input type="text" name="mail" id="sell_mail" />
+                                <span id="sell_mail_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label for="phone_number" class="required">Phone number</label>
+                                <input type="text" name="no" id="sell_phone" />
+                                <span id="sell_phone_err"></span>
+                            </div>
+
+                            <div class="form-input">
+                                <label class="required">Chasis number</label>
+                                <input type="text" name="cno" id="veh_chasis" />
+                                <span id="veh_chasis_err"></span>
+                            </div>
+
+                                <div class="form-input">
+                                    <label class="required">RC book</label>
+                                    <input type="file"  name="rc" id="rc_book" />
+                                    <span id="rc_err"></span>
+                                </div> 
+                           
+                        </div>
+                        <div class="form-group">
+
+                            <div class="form-input">
+                                <label class="required">Vehicle Type (Gear/Gearless)</label>
+                                <input type="text" name="vtype" id="veh_type" />
+                                <span id="veh_type_err"></span>
+                            </div> 
+                            {% comment %} <div class="form-select">
+                                <div class="label-flex">
+                                    <label>Vehicle Type</label>        
+                                </div>
+                                <div class="select-list">
+                                    <select name="type">
+                                    <option>Gear</option>
+                                    <option>Gearless</option>
+                                    
+                                </select>
+                                </div>
+                            </div> {% endcomment %}
+                            <div class="form-input">
+                                <label class="required">Vehicle Color</label>
+                                <input type="text" name="vcolor" id="veh_color" />
+                                <span id="veh_col_err"></span>
+                            </div>
+
+                            <div class="form-input">
+                                <label class="required">Registeration Date</label>
+                                <input type="date" name="rdate" id="reg_year" />
+                                <span id="reg_year_err"></span>
+                            </div>
+                           
+                            <div class="form-input">
+                                <label class="required">Year of purchase</label>
+                                <input type="number" name="year" id="buy_year" />
+                                <span id="buy_year_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label class="required">KM Driven(digits)</label>
+                                <input type="text" name="km" id="veh_km" />
+                                <span id="veh_km_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label class="required">Price</label>
+                                <input type="text" name="price" id="veh_price" />
+                                <span id="veh_price_err"></span>
+                            </div>
+                            <div class="form-input">
+                                <label class="required">Vehicle Photos</label>
+                                <input type="file"  name="vpic" id="vehicle_photo" />
+                                <span id="vpic_err"></span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="form-input">
+                                <label class="required">Additional Information</label>
+                                <input type="text" name="info" id="last_name" />
+                            </div>
+                    {% comment %} <div class="form-input">
+                        <textarea placeholder="Additional info of your vehicle" name="info" ></textarea>
+                    </div> {% endcomment %}
+                    {% comment %} <div class="donate-us">
+                        <label>Donate us</label>
+                        <div class="price_slider ui-slider ui-slider-horizontal">
+                            <div id="slider-margin"></div>
+                            <span class="donate-value" id="value-lower"></span>
+                        </div>
+                    </div> {% endcomment %}
+                    <div class="form-submit">
+                        <input type="submit" value="Submit" class="submit" id="sell_sub" name="submit" />
+                        <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{% static '/main_app/sellerform/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '/main_app/sellerform/vendor/nouislider/nouislider.min.js' %}"></script>
+    <script src="{% static '/main_app/sellerform/vendor/wnumb/wNumb.js' %}"></script>
+    <script src="{% static '/main_app/sellerform/vendor/jquery-validation/dist/jquery.validate.min.js' %}"></script>
+    <script src="{% static '/main_app/sellerform/vendor/jquery-validation/dist/additional-methods.min.js' %}"></script>
+    <script src="{% static '/main_app/sellerform/js/main.js' %}"></script>
+    <script src="{% static '/main_app/js/sell_validation.js' %}"></script>
+    
+</body>
+</html>

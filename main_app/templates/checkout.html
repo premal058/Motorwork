@@ -1,0 +1,171 @@
+{% extends 'base_page.html' %}
+{% block content %}
+{% load static %}
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static '/main_app/images/background/8.jpg' %});">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <h1>checkout</h1>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li>checkout</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!--CheckOut Page-->
+    <div class="checkout-page">
+        <div class="auto-container">
+            <!--Default Links-->
+            {% comment %} <ul class="default-links">
+                <li><span class="fa fa-inbox"></span>Returning customer? <a href="#">Click here to login</a></li>
+
+                <li><span class="fa fa-inbox"></span>Have a coupone? <a href="#">Click here to enter your code</a></li>
+            </ul> {% endcomment %}
+
+            <!--Checkout Details-->
+            <div class="checkout-form">
+                <form action="{% url 'checkout' %}" method="POST" id="checkoutform">
+                {% csrf_token %}
+                    <div class="row clearfix">
+                        <!--Column-->
+                        <div >
+                            <div class="sec-title">
+                                <h3>Billing Details</h3>
+                            </div>
+
+                            <div class="row clearfix">
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">First Name <sup>*</sup></div>
+                                    <input type="text" name="fname" value="" placeholder="" id="fnm">
+                                    <span id="fnm_err"></span>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Last Name </div>
+                                    <input type="text" name="lname" value="" placeholder="" id="lnm">
+                                    <span id="lnm_err"></span>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Company Name</div>
+                                    <input type="text" name="cname" value="" placeholder="" id="cnm">
+                                    <span id="cnm_err"></span>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Email Address</div>
+                                    <input type="text" name="email" value="" placeholder="" id="cmail">
+                                    <span id="cmail_err"></span>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Phone</div>
+                                    <input type="text" name="phone" value="" placeholder="" id="cphone">
+                                    <span id="cphone_err"></span>
+                                </div>
+
+                               
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <div class="field-label">Address</div>
+                                    <input type="text" name="add1" value="" placeholder="Street address" id="a1">
+                                </div>
+
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <input type="text" name="add2" value="" placeholder="Apartment,suite,unit etc. (optional)">
+                                    <span id="cadd_err"></span>
+                                </div>
+                                <!--Form Group-->
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <div class="field-label">Town/City</div>
+                                    <input type="text" name="city" value="" placeholder="Ahmedabad" id="ct">
+                                    <span id="ct_err"></span>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">State</div>
+                                    <input type="text" name="state" value="" placeholder="Gujarat" id="state">
+                                    <span id="st_err"></span>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Postcode/ ZIP</div>
+                                    <input type="text" name="postcode" value="" placeholder="" id="pc">
+                                    <span id="pc_err"></span>
+                                </div>
+
+                                {% comment %} <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <input type="checkbox" name="shipping-option" id="account-option"> &ensp; <label for="account-option">Create An Account?</label>
+                                    <div class="text">Create an account by entering the information below. if you are a returning custoer please login at the top of the page.</div>
+                                </div>
+
+                                <!--Form Group-->
+                                <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                    <div class="field-label"><span>Account Password</span></div>
+                                    <input type="password" name="field-name" value="" placeholder="Password">
+                                </div> {% endcomment %}
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+            </div>
+            <!--End Checkout Details-->
+
+            <!--Order Box-->
+            <div class="order-box">
+                <div class="sec-title">
+                    <h2>YOUR ORDER</h2>
+                </div>
+                <div class="title-box clearfix">
+                    <div class="col">PRODUCT</div>
+                    <div class="col">TOTAL</div>
+                </div>
+                <ul>
+                    
+                    <li class="clearfix">SUBTOTAL<span>{{total}}</span></li>
+                    <li class="clearfix">SHIPPING<span class="free">Free Shipping</span></li>
+                    <li class="clearfix">TOTAL<span>{{total}}</span></li>
+                </ul>
+            </div>
+            <!--End Order Box-->
+
+            <!--Payment Box-->
+            <div class="payment-box">
+                <div class="upper-box">
+
+                </div>
+                <div class="lower-box text-right">
+                    <input type="submit" class="theme-btn btn-style-three" value="PLACE ORDER" id="sub_order">
+                </div>
+                </form>
+            </div>
+            <!--End Payment Box-->
+
+        </div>
+    </div>
+    <!--End CheckOut Page-->
+    <!-- Subscribe Section -->
+    {% comment %} <section class="subscribe-section">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <h3>Check out our repair service for your car and get a free clean</h3>
+                <a href="#" class="call-btn">Order Now</a>
+            </div>
+        </div>
+    </section> {% endcomment %}
+    <!-- End Subscribe Section -->
+{% endblock %}

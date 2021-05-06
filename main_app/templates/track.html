@@ -1,0 +1,133 @@
+{% extends 'base_page.html' %}
+{% block content %}
+{% load static %}
+
+<style>
+#div1
+{
+    margin-top:30px;
+    margin-left:40px;
+    float : left;
+}
+</style>
+<a href="{% url 'trackacc' %}">
+<button style="color:white; height:40px; width:150px; background-color:black; margin-left:1140px;">Track accesories</button>
+</a>
+<a href="{% url 'trackveh' %}">
+<button style="color:white; height:40px; width:150px; background-color:black; margin-left:1140px;">Track Vehicle</button>
+</a>
+ {% if all_app %}
+
+<div style="overflow-y: scroll; height:300px;">
+<center><h3>Waiting for approval</h3></center>
+{% for a in all_app %}
+<div class="card" style="width: 18rem;" id="div1">
+  <div class="card-body">
+    <h5 class="card-title">{{a.vehicle_number}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Status : Pending</h6>
+    <p class="card-text">Wait for the Accept or Rejct from Company.</p>
+    {% comment %} <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> {% endcomment %}
+  </div>
+</div>
+{% endfor %}
+
+ {% endif %}
+
+</div>
+
+{% if all_acc %}
+
+<div style="overflow-y: scroll; height:300px;">
+
+<center><h3>Processing</h3></center>
+{% for a in all_acc %}
+<div class="card" style="width: 18rem;" id="div1">
+  <div class="card-body">
+    <h5 class="card-title">{{a.veh_number}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{a.veh_mode}}</h6>
+    <p class="card-text">Your vehicle is accepted and is under processing.</p>
+    {% comment %} <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> {% endcomment %}
+  </div>
+</div>
+
+{% endfor %}
+
+
+ {% endif %}
+</div>
+{% if all_rej %}
+
+<div style="overflow-y: scroll; height:300px;">
+<center><h3>Rejected</h3></center>
+{% for a in all_rej %}
+<div class="card" style="width: 18rem;" id="div1">
+  <div class="card-body">
+    <h5 class="card-title">{{a.rej_number}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text"> Rejected Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <br>
+    {% comment %} <center><a href="#"><button type="button" class="btn btn-warning">Apply again</button></a></center> {% endcomment %}
+  
+    {% comment %} {% comment %} <a href="#" class="card-link">Card link</a> {% endcomment %}
+    <a href="{% url 'appointment' %}" class="card-link">Apply again</a> 
+    {% comment %} <a href="{% url 'generateinvoice' pk=a.id %}" class="card-link">Pay</a> {% endcomment %}
+  </div>
+</div>
+{% endfor %}
+
+ {% endif %}
+
+</div>
+
+{% if all_done %}
+
+
+<div style="overflow-y: scroll; height:300px;">
+<center><h3>Service completed waiting for payment</h3></center>
+{% for a in all_done %}
+<div class="card" style="width: 18rem;" id="div1">
+  <div class="card-body">
+    <h5 class="card-title">{{a.ser_number}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Service Completed</h6>
+    <p class="card-text">Your vehicle service is completed we are waiting for your payment.</p>
+    <a href="{% url 'generateinvoice' pk=a.id %}" class="card-link">Pay</a>
+    {% comment %} <a href="#" class="card-link">Another link</a> {% endcomment %}
+  </div>
+</div>
+{% endfor %}
+
+ {% endif %}
+ <br>
+
+ </div>
+
+
+
+
+
+{% if all_com %}
+
+<div style="overflow-y: scroll; height:300px;">
+
+<center><h3>Waiting for Picking up</h3></center>
+{% for a in all_com %}
+<div class="card" style="width: 18rem;" id="div1">
+  <div class="card-body">
+    <h5 class="card-title">{{a.ser_number}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{a.ser_mode}}</h6>
+    <p class="card-text">Your vehicle is serviced and bill is Paid.<br>
+    *if your vehicle is Self pick up you need to pick it as soon as possible.
+    </p>
+    {% comment %} <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> {% endcomment %}
+  </div>
+</div>
+
+{% endfor %}
+ {% endif %}
+</div>
+<br><br>
+<br>
+{% endblock %}

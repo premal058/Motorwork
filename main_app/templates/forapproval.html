@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<title>Foreman's Aprroval</title>
+</head>
+<body>
+<center style=" padding:20px;"><a href="{% url 'homepage' %}"><button class="btn btn-success">Homepage</button></a></center>
+<div style=" padding:20px;">
+{% if category %}
+{% if foreman %}
+{% for a in category %}
+  {% for b in foreman %}
+  {% if a.id == b.Category_id_id %}
+<div class="card" style="width: 22rem; float:left; height:310px; margin-right:20px; margin-top:20px;">
+  <div class="card-body">
+    <h5 class="card-title">Name : {{b.Foreman_name}}</h5>
+    {% if a.is_verified ==  True %}
+    <h6 class="card-subtitle mb-2 text-muted">Status : Verified</h6>
+    {% else %}
+    <h6 class="card-subtitle mb-2 text-muted">Status : Pending</h6>
+    {% endif %}
+    <h5 class="card-subtitle mb-2 text-muted">Phone : {{b.Foreman_contact}}</h5>
+    <h5 class="card-subtitle mb-2 text-muted">Email : {{b.Foreman_email}}</h5>
+    <p class="card-text">Address : {{b.Foreman_address}}.</p>
+    <h6 class="card-subtitle mb-1 text-muted">Gender : {{b.Foreman_gender}}</h6>
+    <center><a href="{% url 'forapprove' pk=a.id %}"><button class="btn btn-success">Approve</button></a></center>
+   
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% endif %}
+</div>
+</body>
+</html>

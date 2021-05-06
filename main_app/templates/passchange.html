@@ -1,0 +1,83 @@
+{% load static %} 
+<html>
+<head>
+<style>
+    #a1
+    {
+        
+        margin-top:130px;
+        margin-left:480px;
+
+    }
+    span
+    {
+        color: red;
+    }
+</style>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+     crossorigin="anonymous"></script> 
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+ 
+ 
+ <!------ Include the above in your HEAD tag ----------> 
+ 
+ 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> 
+ <link href="{% static '/doctorfinder/login.css' %}" rel="stylesheet"> 
+ 
+ 
+ 
+ <div class="container" id="a1"> 
+     <div class="row"> 
+         <div class="col-sm-4"> 
+             <div class="card"> 
+                 <article class="card-body"> 
+                     <h4 class="card-title text-center mb-4 mt-1">Forgot Password</h4> 
+                     <hr> 
+                     {% comment %} {% if message %} 
+                     <p class="text-danger text-center">{{message}}</p> 
+                     {% endif %}  {% endcomment %}
+                     <form method="POST" action="{% url 'passchange' %}"> 
+                         {% csrf_token %} 
+                          
+                         <div class="form-group"> 
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="oldpass" class="form-control" placeholder="Old Password" type="password" name="oldpass" id='opass'> 
+                             </div>  
+                             <span id='cp_opass_err'></span>
+                             <br>
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="pass" class="form-control" placeholder="New Password" type="password" name="pass" id='npass'> 
+                             </div> <span id='cp_npass_err'></span> <br>
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="cpass" class="form-control" placeholder="Confirm Password" type="password" name="cpass" id='cpass'> 
+                             </div>  <span id='cp_cpass_err'></span>
+                        </div>  
+                        
+                         <div class="form-group"> 
+                             <button type="submit" class="btn btn-primary btn-block" id='csub'> Reset </button> 
+                             {% if message %}
+                            <p class="text-danger text-center">{{message}}</p>
+                                {% endif %}
+                         </div>  
+                          
+                          
+                     </form> 
+                 </article> 
+             </div>  
+         </div>  
+     </div>  
+ </div> 
+ <script src="{% static '/main_app/js/forcp_valid.js' %}"></script> 
+</html>

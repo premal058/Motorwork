@@ -1,0 +1,561 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from expert-themes.com/html/motor-expert/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 07:19:19 GMT -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Motor Expert - Auto Repair & Service HTML Template | Home Page Two</title>
+
+<!-- Stylesheets -->
+<link href="{% static '/main_app/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static '/main_app/plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static '/main_app/plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static '/main_app/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static '/main_app/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/main_app/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/main_app/css/responsive.css' %}" rel="stylesheet">
+<!--Color Switcher Mockup-->
+<link href="{% static '/main_app/css/css/color-switcher-design.css' %}" rel="stylesheet">
+
+<!--Color Themes-->
+<link id="theme-color-file" href="{% static '/main_app/css/color-themes/default-theme.css' %}" rel="stylesheet">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="{% static '/main_app/images/favicon.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static '/main_app/images/favicon.png' %}" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="{% static '/main_app/js/respond.js' %}"></script><![endif]-->
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+
+        <!--Header-Upper-->
+        <div class="header-upper">
+            <div class="auto-container">
+                <div class="outer-container clearfix">
+                    <!--Header Top-->
+                    <div class="header-top">
+                        <div class="clearfix">
+                            <div class="top-left">
+                                <ul class="social-icon-one clearfix">
+                                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="top-right clearfix">
+                                <p><i class="fa fa-map-marker-alt"></i> 13005 Greenville Avenue California, TX 70240</p>
+                                <!--Search Box-->
+                                <div class="search-box-outer">
+                                    <!--Search Box-->
+                                    <div class="dropdown dropdown-outer">
+                                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                            <li class="panel-outer">
+                                                <div class="form-container">
+                                                    <form method="post" action="https://expert-themes.com/html/motor-expert/blog.html">
+                                                        <div class="form-group">
+                                                            <input type="search" name="field-name" value="" placeholder="Search Here" required="">
+                                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--End earch Box-->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="logo-outer">
+                        <div class="logo"><a href="index.html"><img src="{% static '/main_app/images/logo-2.png' %}" alt="" title=""></a>
+                        </div>
+                    </div>
+
+                    <!-- End Header Top -->
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+						<nav class="main-menu navbar-expand-md">
+							<div class="navbar-header">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+								<ul class="navigation clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a>
+                                        
+                                    </li>
+                                    <li class="dropdown"><a href="#">About</a>
+                                        <ul>
+                                            <li><a href="{% url 'about' %}">About</a></li>
+                                            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                                            <li><a href="{% url 'team' %}">Team</a></li>
+                                            <li><a href="{% url 'price' %}">Price</a></li>
+                                            <li><a href="{% url 'comingsoon' %}">Coming Soon</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Projects</a>
+                                        <ul>
+                                            <li><a href="{% url 'project' %}">Project</a></li>
+                                            <li><a href="{% url 'projectdetail' %}">Project Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            <li><a href="{% url 'services' %}">Services 01</a></li>
+                                            <li><a href="{% url 'servicedetail' %}">Services Single</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Pages</a>
+                                        
+                                                    <ul>
+                                                        <li><a href="{% url 'team' %}">Team</a></li>
+                                                        <li><a href="{% url 'teamdetail' %}">Team Single</a></li>
+                                                        <li><a href="{% url 'testimonials' %}">Testimonial</a></li>
+                                                        <li><a href="{% url 'faq' %}">FAQ's</a></li>
+                                                        <li><a href="{% url 'comingsoon' %}">Coming Soon</a></li>
+                                                    </ul>
+                                                
+                                    </li>
+                                    <li class="dropdown"><a href="#">News</a>
+                                        <ul>
+                                            <li><a href="{% url 'blog' %}">News</a></li>
+                                            <li><a href="{% url 'blogdetail' %}">News Detail</a></li>
+                                            <li><a href="{% url 'errorpage' %}">Error Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Shop</a>
+                                        <ul>
+                                            <li><a href="{% url 'shop' %}">Products</a></li>
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                            <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                            <li><a href="{% url 'Register' %}">Registration</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+
+                        <!-- Outer Box -->
+                        <div class="outer-box">
+                            <div class="cart-btn">
+                                <a href="{% url 'cart' %}" title="">
+                                    <i class="flaticon-shopping-bag-1"></i>
+                                    <span class="count">2</span>
+                                </a>
+                            </div>
+
+                            <div class="call-btn">
+                                <a href="{% url 'appointment' %}" class="theme-btn btn-style-two">Book Now</a>
+                            </div>
+
+                            <form action="{% url 'logout' %}">
+                                <input type="submit" name="submit" value="logout">
+                            </form>
+                            <!--End Outer Box -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--End Header Upper-->
+
+        <!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container clearfix">
+                <!--Logo-->
+            	<div class="logo pull-left">
+                	<a href="index.html" class="img-responsive"><img src="{% static '/main_app/images/logo-small.png' %}" alt="" title=""></a>
+                </div>
+
+                <!--Right Col-->
+                <div class="right-col pull-right">
+                	<!-- Main Menu -->
+                    <nav class="main-menu  navbar-expand-md">
+                        <div class="navbar-header">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                            <ul class="navigation clearfix">
+                                <li class="current dropdown"><a href="{% url 'index' %}">Home</a>
+									
+								</li>
+                                <li class="dropdown"><a href="#">About</a>
+                                    <ul>
+                                
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                                    <li><a href="{% url 'team' %}">Team</a></li>
+                                    <li><a href="{% url 'price' %}">Price</a></li>
+                                    <li><a href="{% url 'comingsoon' %}">Coming Soon</a></li>
+                                
+                                    </ul>   
+                                </li>
+                                <li class="dropdown"><a href="#">Projects</a>
+                                    <ul>
+                                        <li><a href="{% url 'project' %}">Project</a></li>
+                                        <li><a href="{% url 'projectdetail' %}">Project Detail</a></li>
+                                        </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Services</a>
+                                    <ul>
+                                        <li><a href="{% url 'services' %}">Services 01</a></li>
+                                        <li><a href="{% url 'services' %}">Services 02</a></li>
+                                        <li><a href="service-detail.html">Services Single</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown has-mega-menu"><a href="#">Pages</a>
+                                    <div class="mega-menu">
+                                        <div class="mega-menu-bar row clearfix">
+                                            <div class="column col-md-3 col-sm-3 col-xs-12">
+                                                <h3>About Us</h3>
+                                                <ul>
+                                                    <li><a href="{% url 'team' %}">Team</a></li>
+                                                        <li><a href="{% url 'teamdetail' %}">Team Single</a></li>
+                                                        <li><a href="{% url 'testimonials' %}">Testimonial</a></li>
+                                                        <li><a href="{% url 'faq' %}">FAQ's</a></li>
+                                                        <li><a href="{% url 'comingsoon' %}">Coming Soon</a></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="column col-md-3 col-sm-3 col-xs-12">
+                                                <h3>Blog</h3>
+                                                <ul>
+                                                     <li><a href="{% url 'blog' %}">News</a></li>
+                                                    <li><a href="{% url 'blogdetail' %}">News Detail</a></li>
+                                                    <li><a href="{% url 'errorpage' %}">Error Page</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="column col-md-3 col-sm-3 col-xs-12">
+                                                <h3>Shop</h3>
+                                                <ul>
+                                                   <li><a href="{% url 'shop' %}">Products</a></li>
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                            <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                            <li><a href="{% url 'Register' %}">Registration</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown"><a href="#">News</a>
+                                    <ul>
+                                       <li><a href="{% url 'blog' %}">News</a></li>
+                                        <li><a href="{% url 'blogdetail' %}">News Detail</a></li>
+                                        <li><a href="{% url 'errorpage' %}">Error Page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#">Shop</a>
+                                    <ul>
+                                       <li><a href="{% url 'shop' %}">Products</a></li>
+                                        {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                        <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                        <li><a href="{% url 'Register' %}">Registration</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+                </div>
+
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    </header>
+    <!--End Main Header -->
+
+<!--table-->
+<section>
+{% comment %} <div class="auto-container"> {% endcomment %}
+            {% comment %} <div class="row clearfix">
+               <!-- Service Block -->
+                <div class="service-block col-lg-4 col-md-6 col-sm-12"> {% endcomment %}
+<div class="table-responsive">
+ {% if allcase %}
+<table class="table table-bordered table-dark" align="center" height="200px" width="320px" border="1px" >
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">UserName</th>
+      <th scope="col">Vehicle Number</th>
+      <th scope="col">Appointment Date</th>
+      <th scope="col">Appointment Time</th>
+      <th scope="col">Status</th>
+      <th scope="col">Delivery Type</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for a in allcase %}
+    <tr>
+      <th scope="row">{{a.id}}</th>
+      <td>{{a.vehicle_username}}</td>
+      <td>{{a.vehicle_number}}</td>
+      <td>{{a.vehicle_appdate}}</td>
+      <td>{{a.vehicle_apptime}}</td>
+      <td>{{a.vehicle_status}}</td>
+      <td>{{a.vehicle_mode}}</td>
+      
+    </tr>
+    
+  </tbody>
+  {% endfor %}
+    {% endif %}
+    </div>
+    {% comment %} </div> {% endcomment %}
+    {% comment %} </div>
+    </div> {% endcomment %}
+    </section>
+<!--table-->
+
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <!-- Contact Info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-placeholder"></span>
+                        <p>13005 Greenville Avenue <br> California, TX 70240</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-phone"></span>
+                        <p>+1 800125 6524</p>
+                        <p><a href="#">mail@autowork.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-stopwatch"></span>
+                        <p>10:00am to 6:00pm</p>
+                        <p>Sunday Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Info Section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer" style="background-image: url({% static '/main_app/images/background/4.jpg' %});">
+        <div class="auto-container">
+
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget about-widget">
+                            <div class="footer-logo">
+                                <figure>
+                                    <a href="index.html"><img src="{% static '/main_app/images/footer-logo.png' %}" alt=""></a>
+                                </figure>
+                            </div>
+                            <div class="widget-content">
+                                <div class="text">How to pursue pleasure rationally thats encounter consequences that extremely painful. Nor again is there anyones who loves or pursues or ut desires obtains pain of itself, because.</div>
+                                <h4>Follow Us:</h4>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget services-widget">
+                            <h2 class="widget-title">Our Services</h2>
+                            <div class="widget-content">
+                                <ul class="services-list">
+                                    <li><a href="#">Engine Diagnostic & Repair</a></li>
+                                    <li><a href="#">Maintanence Inspaection</a></li>
+                                    <li><a href="#">Electrical System Diagnostic</a></li>
+                                    <li><a href="#">Wheel Allignment & Installation</a></li>
+                                    <li><a href="#">Air Conditioner Service & Repair</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <!--Footer Column-->
+                        <div class="footer-widget gallery-widget">
+                            <h2 class="widget-title">Instragram</h2>
+                             <!--Footer Column-->
+                            <div class="widget-content">
+                                <div class="outer clearfix">
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-1.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-2.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-3.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-3.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-4.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-4.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/news-1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-5.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/news-2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-6.jpg' %}" alt=""></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <!--Footer Column-->
+                        <div class="footer-widget news-widget">
+                            <h2 class="widget-title">Latest News</h2>
+                             <!--Footer Column-->
+                            <div class="widget-content">
+                                <div class="post">
+                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
+                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
+                                </div>
+
+                                <div class="post">
+                                    <h4><a href="#">Get Usefull Car Maintanence Tips From Our Expets</a></h4>
+                                    <span class="date"><i class="far fa-calendar-check"></i>Aug 21, 2015</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Bottom-->
+         <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="copyright-text">
+                    <p>Copyrights © 2019 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Main Footer -->
+
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+
+<!-- Color Palate / Color Switcher -->
+<div class="color-palate">
+    <div class="color-trigger">
+        <i class="fa fa-cog"></i>
+    </div>
+    <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+    </div>
+    <div class="various-color clearfix">
+        <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="{% static '/main_app/css/color-themes/default-theme.css' %}"></span>
+            <span class="palate green-color" data-theme-file="{% static '/main_app/css/color-themes/green-theme.css' %}"></span>
+            <span class="palate yellow-color" data-theme-file="{% static '/main_app/css/color-themes/blue-theme.css' %}"></span>
+            <span class="palate orange-color" data-theme-file="{% static '/main_app/css/color-themes/orange-theme.css' %}"></span>
+            <span class="palate purple-color" data-theme-file="{% static '/main_app/css/color-themes/purple-theme.css' %}"></span>
+            <span class="palate teal-color" data-theme-file="{% static '/main_app/css/color-themes/teal-theme.css' %}"></span>
+            <span class="palate brown-color" data-theme-file="{% static '/main_app/css/color-themes/brown-theme.css' %}"></span>
+            <span class="palate redd-color" data-theme-file="{% static '/main_app/css/color-themes/redd-color.css' %}"></span>
+        </div>
+    </div>
+    <ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li></ul>
+    <a href="#" class="purchase-btn">Purchase now $15</a>
+
+    <div class="palate-foo">
+        <span>You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.</span>
+    </div>
+</div>
+
+<script src="{% static '/main_app/js/jquery.js' %}"></script>
+<script src="{% static '/main_app/js/popper.min.js' %}"></script>
+<script src="{% static '/main_app/js/bootstrap.min.js' %}"></script>
+
+<!--Revolution Slider-->
+<script src="{% static '/main_app/plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static '/main_app/js/main-slider-script.js' %}"></script>
+{% comment %} <script src="{% static '/main_app/js/mss.js' %}"></script> {% endcomment %}
+<!--End Revolution Slider-->
+<script src="{% static '/main_app/js/jquery.fancybox.js' %}"></script>
+<script src="{% static '/main_app/js/owl.js' %}"></script>
+<script src="{% static '/main_app/js/appear.js' %}"></script>
+<script src="{% static '/main_app/js/wow.js' %}"></script>
+<script src="{% static '/main_app/js/mixitup.js' %}"></script>
+<script src="{% static '/main_app/js/script.js' %}"></script>
+<!--Google Map APi Key-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCJyIBI88fFMi5YJ8khAsPX7ouMsIZPorc"></script>
+<script src="{% static '/main_app/js/map-script.js' %}"></script>
+<!--End Google Map APi-->
+<script src="{% static '/main_app/js/color-settings.js' %}"></script>
+</body>
+
+<!-- Mirrored from expert-themes.com/html/motor-expert/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 07:19:28 GMT -->
+</html>

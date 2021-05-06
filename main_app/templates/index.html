@@ -1,0 +1,1121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+                                                                                                                        
+<!-- Mirrored from expert-themes.com/html/motor-expert/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 07:19:19 GMT -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Motor Expert - Auto Repair & Service HTML Template | Home Page </title>
+
+<!-- Stylesheets -->
+<link href="{% static '/main_app/css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static '/main_app/plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static '/main_app/plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static '/main_app/plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static '/main_app/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static '/main_app/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/main_app/css/style.css' %}" rel="stylesheet">
+<link href="{% static '/main_app/css/responsive.css' %}" rel="stylesheet">
+<!--Color Switcher Mockup-->
+<link href="{% static '/main_app/css/css/color-switcher-design.css' %}" rel="stylesheet">
+
+<!--Color Themes-->
+<link id="theme-color-file" href="{% static '/main_app/css/color-themes/default-theme.css' %}" rel="stylesheet">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="{% static '/main_app/images/favicon.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static '/main_app/images/favicon.png' %}" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="{% static '/main_app/js/respond.js' %}"></script><![endif]-->
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-two">
+
+        <!--Header-Upper-->
+        <div class="header-upper">
+            <div class="auto-container">
+                <div class="outer-container clearfix">
+                    <!--Header Top-->
+                    <div class="header-top">
+                        <div class="clearfix">
+                            <div class="top-left">
+                                {% comment %} <ul class="social-icon-one clearfix">
+                                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                                </ul> {% endcomment %}
+                            </div>
+                            <div class="top-right clearfix">
+                           
+                                <p><i class="fa fa-map-marker-alt"></i> Ahmedabad </p>
+                                <!--Search Box-->
+                                {% comment %} <div class="search-box-outer">
+                                    <!--Search Box-->
+                                    <div class="dropdown dropdown-outer">
+                                        <button class="search-box-btn dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-search"></span></button>
+                                        <ul class="dropdown-menu pull-right search-panel" aria-labelledby="dropdownMenu3">
+                                            <li class="panel-outer">
+                                                <div class="form-container">
+                                                    <form method="post" action="https://expert-themes.com/html/motor-expert/blog.html">
+                                                        <div class="form-group">
+                                                            <input type="search" name="field-name" value="" placeholder="Search Here" required="">
+                                                            <button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!--End earch Box--> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="logo-outer">
+                        <div class="logo"><a href="{% url 'homepage' %}"><img src="{% static '/main_app/images/logo-2.png' %}" alt="" title=""></a>
+                        </div>
+                    </div>
+
+                    <!-- End Header Top -->
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+						<nav class="main-menu navbar-expand-md">
+							<div class="navbar-header">
+								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+								<ul class="navigation clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a>
+                                        
+                                    </li>
+                                    <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            {% comment %} <li><a href="{% url 'about' %}">About</a></li> {% endcomment %}
+                                            
+                                            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                                            <li><a href="{% url 'services' %}">Services</a></li>
+                                            <li><a href="{% url 'membershipform' %}">Membership</a></li>
+                                        </ul>
+                                    </li>
+                                   
+                                   
+                                
+                                    <li class="dropdown"><a href="#">Vehicle</a>
+                                        <ul>
+                                            
+                                            <li><a href="{% url 'sellpage' %}">Buy Vehicle</a></li>
+                                            <li><a href="{% url 'vehiclesell' %}">Sell used vehicle</a></li>
+                                            {% comment %} <li><a href="{% url 'shop' %}">Products</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="{% url 'checkout' %}">Checkout</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="{% url 'cart' %}">Shopping Cart</a></li> {% endcomment %}
+                                            
+                                            {% comment %} <li><a href="{% url 'Register' %}">Registration</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Shop</a>
+                                        <ul>
+                                            
+                                            <li><a href="{% url 'shop' %}">Products</a></li>
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="{% url 'checkout' %}">Checkout</a></li> {% endcomment %}
+                                            <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                            
+                                            {% comment %} <li><a href="{% url 'Register' %}">Registration</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li> 
+                                    {% comment %} <li><a href="#">Need Help</a></li> {% endcomment %}
+                                    <li><a href="{% url 'emergency' %}">Need Help</a></li>
+
+                                   
+                                
+                         <li class="dropdown"><a href="#">Profile</a>
+                                        <ul>
+                                            {% comment %} <li><a href="{% url 'about' %}">About</a></li> {% endcomment %}
+                                            
+                                            <li><a href="{% url 'userprofile' %}">Profile</a></li>
+                                            <li><a href="{% url 'track' %}">Track</a>
+                                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                    <a href="{% url 'chat' %}" title="">
+                                 <img src="{% static '/main_app/images/chat.png' %}" style="height:34px; float:left;">
+                                 </a>
+                                    </li>
+                            </ul>
+                            </div>
+                        </nav>
+                                
+                        <!-- Main Menu End-->
+
+                        <!-- Outer Box -->
+                        <div class="outer-box">
+                            <div class="cart-btn">
+                                <a href="{% url 'cart' %}" title="">
+                                    <i class="flaticon-shopping-bag-1"></i>
+                                    <span class="count">2</span>
+                                </a>
+                            </div>
+
+                            {% comment %} <div class="cart-btn"> {% endcomment %}
+                                
+                                    {% comment %} <i class="flaticon-shopping-bag-1"></i> {% endcomment %}
+                                    {% comment %} <span class="count">2</span> 
+                                </a>{% endcomment %}
+                            {% comment %} </div>  {% endcomment %}
+                         
+
+{% comment %}                             
+                            
+                        
+                        {% comment %} <div class="call-btn">
+                                <a href="{% url 'logout' %}" class="theme-btn btn-style-two">Logout</a>
+                            </div>   {% endcomment %}
+
+                           
+
+                            {% comment %} <form action="{% url 'logout' %}">
+                                <input type="submit" name="submit" value="logout">
+                            </form> {% endcomment %}
+                            <!--End Outer Box -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--End Header Upper-->
+
+        <!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container clearfix">
+                <!--Logo-->
+            	<div class="logo pull-left">
+                	<a href="{% url 'homepage' %}" class="img-responsive"><img src="{% static '/main_app/images/logo.png' %}" style="height:63px; width:170px;" alt="" title=""></a>
+                </div>
+
+                <!--Right Col-->
+                
+                <div>
+                {% comment %} <div >class="right-col pull-right" {% endcomment %}
+                	<!-- Main Menu -->
+                    <nav class="main-menu  navbar-expand-md" style="margin-left:50px;">
+                        <div class="navbar-header">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                           <ul class="navigation clearfix"  style="margin-left:110px;">
+                                    <li><a href="{% url 'homepage' %}">Home</a>
+                                        
+                                    </li>
+                                    <li class="dropdown"><a href="#">Services</a>
+                                        <ul>
+                                            {% comment %} <li><a href="{% url 'about' %}">About</a></li> {% endcomment %}
+                                            
+                                            <li><a href="{% url 'appointment' %}">Appointment</a></li>
+                                            <li><a href="{% url 'services' %}">Services</a></li>
+                                            <li><a href="{% url 'membershipform' %}">Membership</a></li>
+                                        </ul>
+                                    </li>
+                                   
+                                   
+                                
+                                    <li class="dropdown"><a href="#">Vehicle</a>
+                                        <ul>
+                                            
+                                            <li><a href="{% url 'sellpage' %}">Buy Vehicle</a></li>
+                                            <li><a href="{% url 'vehiclesell' %}">Sell used vehicle</a></li>
+                                            {% comment %} <li><a href="{% url 'shop' %}">Products</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="{% url 'checkout' %}">Checkout</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="{% url 'cart' %}">Shopping Cart</a></li> {% endcomment %}
+                                            
+                                            {% comment %} <li><a href="{% url 'Register' %}">Registration</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Shop</a>
+                                        <ul>
+                                            
+                                            <li><a href="{% url 'shop' %}">Products</a></li>
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="{% url 'checkout' %}">Checkout</a></li> {% endcomment %}
+                                            <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                            
+                                            {% comment %} <li><a href="{% url 'Register' %}">Registration</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li> 
+                                    <li><a href="{% url 'emergency' %}">Need Help</a></li>
+
+                                    <li class="dropdown"><a href="#">Profile</a>
+                                        <ul>
+                                            
+                                            <li><a href="{% url 'userprofile' %}">Profile</a></li>
+                                            {% comment %} <li><a href="shop-single.html">Products Detail</a></li> {% endcomment %}
+                                            <li><a href="{% url 'track' %}">Track</a></li>
+                                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                                            
+                                            {% comment %} <li><a href="{% url 'Register' %}">Registration</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+
+                                      <li>
+                                    <a href="{% url 'chat' %}" title="">
+                                 <img src="{% static '/main_app/images/chat.png' %}" style="height:37px; float:left;">
+                                 </a>
+                                    </li>
+
+                                   <li>
+                                   
+                                     <a href="{% url 'cart' %}" title="">
+                                    {% comment %} <i class="flaticon-shopping-bag-1" style="height:30px;"></i> {% endcomment %}
+                                    {% comment %} <span class="count">2</span> {% endcomment %}
+                                    <svg class="bi bi-bag-fill" width="2em" height="1.8em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                     <path d="M1 4h14v10a2 2 0 01-2 2H3a2 2 0 01-2-2V4zm7-2.5A2.5 2.5 0 005.5 4h-1a3.5 3.5 0 117 0h-1A2.5 2.5 0 008 1.5z"/>
+                                    </svg>
+                                </a>
+                                    </li>
+                                </ul>                
+                 </div>
+                        
+                    </nav><!-- Main Menu End-->
+                    
+
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    </header>
+    <!--End Main Header -->
+    <!--Main Slider-->
+    <section class="main-slider">
+        <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
+            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+                <ul>
+                    <!-- Slide 1 -->
+                    {% comment %} <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1687" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{% static '/main_app/images/main-slider/image-3.jpg' %}" data-title="Slide Title" data-transition="parallaxvertical">
+
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static '/main_app/images/main-slider/image-1.jpg' %}">
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['550','600','550','550']"
+                        data-whitespace="normal"
+                        data-hoffset="['15','15','15','15']"
+                        data-voffset="['-120','-120','-120','-120']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <h4>Your Vehicle is</h4>
+                        </div>
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['700','700','700','700']"
+                        data-whitespace="normal"
+                        data-hoffset="['15','15','15','15']"
+                        data-voffset="['-65','-65','-65','-65']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <h2>Save in our Hands</h2>
+                        </div>
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-width="['700','700','450','450']"
+                        data-hoffset="['15','15','15','15']"
+                        data-voffset="['5','5','5','5']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <div class="text">We specialize in complete auto care at a low cost and in a <br> professional manner.</div>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="auto"
+                        data-whitespace="nowrap"
+                        data-hoffset="['15','15','15','15']"
+                        data-voffset="['105','105','105','105']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <a href="{% url 'services' %}" class="theme-btn btn-style-one">Booking Now</a>
+                        </div>
+                    </li> {% endcomment %}
+
+                    <!-- Slide 1 -->
+                    {% comment %} <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{% static '/main_app/images/main-slider/image-2.jpg' %}" data-title="Slide Title" data-transition="parallaxvertical">
+
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static '/main_app/images/main-slider/image-2.jpg' %}">
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['550','600','550','550']"
+                        data-whitespace="normal"
+                        data-textalign="center"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-120','-120','-120','-120']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <h4>The Best Car Repair and</h4>
+                        </div>
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['700','700','700','700']"
+                        data-textalign="center"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-65','-65','-65','-65']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <h2>Maintenance Auto Service</h2>
+                        </div>
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-textalign="center"
+                        data-whitespace="normal"
+                        data-width="['700','700','550','450']"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['5','5','5','15']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <div class="text">We specialize in complete auto care at a low cost and in a <br> professional manner.</div>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="auto"
+                        data-whitespace="nowrap"
+                        data-textalign="center"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['105','105','105','105']"
+                        data-x="['center','center','center','center']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <a href="{% url 'services' %}" class="theme-btn btn-style-one">Booking Now</a>
+                        </div>
+                    </li> {% endcomment %}
+
+<!-- Slide 1 -->
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1698" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="{% static '/main_app/images/main-slider/image-2.jpg' %}" data-title="Slide Title" data-transition="parallaxvertical">
+
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static '/main_app/images/main-slider/image-3.jpg' %}">
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['490','490','490','490']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','15','15','15']"
+                        data-voffset="['-120','-120','-120','-120']"
+                        data-x="['right','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <h4>The Best vehicle Repair and</h4>
+                        </div>
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['490','590','490','490']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','15','15','15']"
+                        data-voffset="['-65','-65','-65','-65']"
+                        data-x="['right','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <h2>Maintenance Service</h2>
+                        </div>
+
+                        <div class="tp-caption"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-width="['490','490','390','490']"
+                        data-hoffset="['0','15','15','15']"
+                        data-voffset="['5','5','5','5']"
+                        data-x="['right','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <div class="text">We specialize in complete auto care at a low cost and in a <br> professional manner.</div>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme"
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['490','490','490','490']"
+                        data-whitespace="nowrap"
+                        data-hoffset="['0','15','15','15']"
+                        data-voffset="['105','105','105','105']"
+                        data-x="['right','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <a href="{% url 'appointment' %}" class="theme-btn btn-style-one">Booking Now</a>
+                        </div>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Main Slider-->
+
+    <!-- Call To Action -->
+    <section class="call-to-action" style="background-image:url({% static '/main_app/images/background/5.jpg' %});">
+        <div class="inner-container clearfix">
+            <div class="title-box">
+                <h3>If You Need Any <span>technical solution ...</span> We Are Available For You We Manage Every Kind of Business , Join Now!!</h3>
+            </div>
+
+            <div class="btn-box">
+                <a href="{% url 'appointment' %}" class="theme-btn btn-style-one">Make An Appointment</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Call To Action -->
+   
+        {% comment %} <div style="position: fixed; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);">
+     <a href="{% url 'chat' %}">
+             <img src="{% static '/main_app/images/chat.png' %}"></a>
+        </div> {% endcomment %}
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="auto-container">
+            <div class="services-carousel owl-carousel owl-theme">
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-1.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Suspension Repair</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-electrical"></span>
+                                <h4><a href="service-detail.html">Suspension Repair</a></h4>
+                            </div>
+                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-2.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Basic Maintain</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-pistons"></span>
+                                <h4><a href="service-detail.html">Basic Maintain</a></h4>
+                            </div>
+                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-3.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Wash & Polish</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-cogwheel"></span>
+                                <h4><a href="service-detail.html">Wash & Polish</a></h4>
+                            </div>
+                            <p>We should have to regularly wash and polish our vehicle to keep it clean and shine.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-1.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Engine Oil & Brake Oil</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-electrical"></span>
+                                <h4><a href="service-detail.html">Engine Oil & Brake Oil</a></h4>
+                            </div>
+                            <p>We have to change our vehicle's engine oil and brake oil to maintain average and smoothing of vehicle and brake.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-2.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Battery Service</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-pistons"></span>
+                                <h4><a href="service-detail.html">Battery Service</a></h4>
+                            </div>
+                           <p>We have to service our battery so that we can not face any breakdown due to battery.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-3.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Tire Servicing</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-cogwheel"></span>
+                                <h4><a href="service-detail.html">Tire Servicing</a></h4>
+                            </div>
+                         <p>For not having puncture or less air proble or any problem related to tire is not accepted.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-1.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Suspension Repair</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-electrical"></span>
+                                <h4><a href="service-detail.html">Suspension Repair</a></h4>
+                            </div>
+                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-2.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Engine Overhaul</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-pistons"></span>
+                                <h4><a href="service-detail.html">Engine Overhaul</a></h4>
+                            </div>
+                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Block -->
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure><img src="{% static '/main_app/images/resource/service-3.jpg' %}" alt=""></figure>
+                            <div class="title"><h4>Wheel Alignment</h4></div>
+                        </div>
+                        <div class="caption-box">
+                            <div class="title-box">
+                                <span class="icon flaticon-cogwheel"></span>
+                                <h4><a href="service-detail.html">Wheel Alignment</a></h4>
+                            </div>
+                            <p>We should point out that maintaining your vehicle with an occasional visual inspectionfluid level.</p>
+                            {% comment %} <a href="service-detail.html" class="read-more">Read More <i class="fa fa-angle-double-right"></i></a> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- Fact counter -->
+    <section class="fun-fact-two no-pd-top">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <!-- Count box -->
+                <div class="count-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-boy-broad-smile"></span>
+                        <span class="count-text" data-speed="5000" data-stop="8">0</span>
+                        <div class="counter-title"><h3>Happy Client</h3></div>
+                    </div>
+                </div>
+
+                <!-- Count box -->
+                <div class="count-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-transport"></span>
+                        <span class="count-text" data-speed="4500" data-stop="21">0</span>
+                        <div class="counter-title"><h3>Service Done</h3></div>
+                    </div>
+                </div>
+
+                <!-- Count box -->
+                <div class="count-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-avatar-1"></span>
+                        <span class="count-text" data-speed="3500" data-stop="3">0</span>
+                        <div class="counter-title"><h3>Total Experts</h3></div>
+                    </div>
+                </div>
+
+                <!-- Count box -->
+                <div class="count-box col-lg-3 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-car-1"></span>
+                        <span class="count-text" data-speed="4000" data-stop="25">0</span>
+                        <div class="counter-title"><h3>Total Service</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Fact counter -->
+    <!-- Testimonial Section Two -->
+    
+ 
+    <!-- End Testimonial Section Two -->
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h2>Best Price Table</h2>
+                <div class="separator"><span class="flaticon-settings-2"></span></div>
+            </div>
+
+            <div class="row clearfix">
+                <!-- Pricing Table -->
+                <div class="pricing-table col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="title">
+                            <h3>Silver</h3>
+                            <p>Maintain</p>
+                        </div>
+                        <div class="table-content">
+                            <ul>
+                                <li>Basic maintain your vehicle</li>
+                                <li>Washing</li>
+                                <li>Oil change</li>
+                               
+                            </ul>
+                        </div>
+                        <div class="price">
+                            <h2>₹599</h2>
+                            
+                        </div>
+                        <div class="table-footer">
+                            <a href="{% url 'silver' %}" class="theme-btn btn-style-two">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Table -->
+                <div class="pricing-table col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="title">
+                            <h3>Gold</h3>
+                            <p>Maintain</p>
+                            <span class="category">Popular</span>
+                        </div>
+                        <div class="table-content">
+                            <ul>
+                                <li>3 Basic maintain your vehicle</li>
+                                <li>Washing & Polishing</li>
+                                <li>Oil change &Brake oil</li>
+                                {% comment %} <li>3 months Warranty </li> {% endcomment %}
+                            </ul>
+                        </div>
+                        <div class="price">
+                            <h2>₹1599.00</h2>
+                            {% comment %} <span>/6 Month</span> {% endcomment %}
+                        </div>
+                        <div class="table-footer">
+                            <a href="{% url 'gold' %}" class="theme-btn btn-style-two">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pricing Table -->
+                <div class="pricing-table col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="title">
+                            <h3>Platinum</h3>
+                            <p>Maintain & Tuning</p>
+                        </div>
+                        <div class="table-content">
+                            <ul>
+                                <li>6 Basic maintain your vehicle</li>
+                                <li>Washing, Polishing, Brake oil</li>
+                                <li>Oil change & Battery service</li>
+                                {% comment %} <li>12 months Warranty </li> {% endcomment %}
+                            </ul>
+                        </div>
+                        <div class="price">
+                            <h2>₹3599</h2>
+                            {% comment %} <span>/ 12 Month</span> {% endcomment %}
+                        </div>
+                        <div class="table-footer">
+                            <a href="{% url 'platinum' %}" class="theme-btn btn-style-two">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Pricing Section -->
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <!-- Contact Info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-placeholder"></span>
+                                    <p>2nd Floor,
+            Gujarat Bhavan,
+            Ellis Bridge, Ashram Road
+            <br> Ahmedabad, 380006 </p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box"><a href="tel:+918511119796">
+                        <span class="icon flaticon-phone"></span>
+                        <p>+91 8511119796</p></a>
+                        <p><a href="mailto:motorworkexpert@gmail.com">motorworkexpert@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <!-- Contact Info Block -->
+                <div class="contact-info-block col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <span class="icon flaticon-stopwatch"></span>
+                        <p>10:00am to 6:00pm</p>
+                        <p>Sunday Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Info Section -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer" style="background-image: url({% static '/main_app/images/background/4.jpg' %});">
+        <div class="auto-container">
+
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget about-widget">
+                            <div class="footer-logo">
+                                <figure>
+                                    <a href="{% url 'homepage' %}"><img src="{% static '/main_app/images/footer-logo.png' %}" alt=""></a>
+                                </figure>
+                            </div>
+                            <div class="widget-content">
+                                <div class="text">Come and have a nice and quality work for your vehicle from our talented foremans and gurantee of problem solving from us.We praise your welcome at our service center.</div>
+                                <h4>Follow Us:</h4>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-widget services-widget">
+                            <h2 class="widget-title">Our Services</h2>
+                            <div class="widget-content">
+                                <ul class="services-list">
+                                    <li>Engine Diagnostic & Repair</li>
+                                    <li>Washing & Polishing</li>
+                                    <li>Heating & Cooling</li>
+                                    <li>Wheel Allignment & Installation</li>
+                                    <li>Brake & Engine Oiling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <!--Footer Column-->
+                        <div class="footer-widget gallery-widget">
+                            <h2 class="widget-title">Gallery</h2>
+                             <!--Footer Column-->
+                            <div class="widget-content">
+                                <div class="outer clearfix">
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-1.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-2.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-3.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-3.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/feature-4.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-4.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/news-1.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-5.jpg' %}" alt=""></a>
+                                    </figure>
+
+                                    <figure class="image">
+                                        <a href="{% static '/main_app/images/resource/news-2.jpg' %}" class="lightbox-image" title="Image Title Here"><img src="{% static '/main_app/images/resource/insta-6.jpg' %}" alt=""></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--Footer Column-->
+                    <div class="footer-column col-lg-3 col-md-6 col-sm-12">
+                        <!--Footer Column-->
+                        <div class="footer-widget news-widget">
+                      
+                        
+                            <h2 class="widget-title">Facility</h2>
+                             <!--Footer Column-->
+
+                            <div class="widget-content">
+                                <div class="post">
+                                    <h4>Buy-Sell Vehicles</h4>
+                                    {% comment %} <span class="date"><i class="far fa-calendar-check"></i>{{feed.Feedback_subject}}</span> {% endcomment %}
+                                </div>
+                          
+                                <div class="post">
+                                    <h4>Accesories</h4>
+                                    {% comment %} <span class="date"><i class="far fa-calendar-check"></i>{{feed1.Feedback_subject}}</span> {% endcomment %}
+                                </div>
+                                <div class="post">
+                                    <h4>Vehicle Service</h4>
+                                    {% comment %} <span class="date"><i class="far fa-calendar-check"></i>{{feed1.Feedback_subject}}</span> {% endcomment %}
+                                </div>
+                                <div class="post">
+                                    <h4>Membership</h4>
+                                    {% comment %} <span class="date"><i class="far fa-calendar-check"></i>{{feed1.Feedback_subject}}</span> {% endcomment %}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Bottom-->
+         {% comment %} <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="copyright-text">
+                    <p>Copyrights © 2019 All Rights Reserved. by <a href="#"> Expert Themes</a></p>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </footer>
+    <!-- End Main Footer -->
+
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+
+<!-- Color Palate / Color Switcher -->
+{% comment %} <div class="color-palate">
+    <div class="color-trigger">
+        <i class="fa fa-cog"></i>
+    </div>
+    <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+    </div>
+    <div class="various-color clearfix">
+        <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="{% static '/main_app/css/color-themes/default-theme.css' %}"></span>
+            <span class="palate green-color" data-theme-file="{% static '/main_app/css/color-themes/green-theme.css' %}"></span>
+            <span class="palate yellow-color" data-theme-file="{% static '/main_app/css/color-themes/blue-theme.css' %}"></span>
+            <span class="palate orange-color" data-theme-file="{% static '/main_app/css/color-themes/orange-theme.css' %}"></span>
+            <span class="palate purple-color" data-theme-file="{% static '/main_app/css/color-themes/purple-theme.css' %}"></span>
+            <span class="palate teal-color" data-theme-file="{% static '/main_app/css/color-themes/teal-theme.css' %}"></span>
+            <span class="palate brown-color" data-theme-file="{% static '/main_app/css/color-themes/brown-theme.css' %}"></span>
+            <span class="palate redd-color" data-theme-file="{% static '/main_app/css/color-themes/redd-color.css' %}"></span>
+        </div>
+    </div>
+    <ul class="rtl-version option-box"> <li class="rtl">RTL Version</li> <li>LTR Version</li></ul>
+    <a href="#" class="purchase-btn">Purchase now $15</a>
+
+    <div class="palate-foo">
+        <span>You will find much more options for colors and styling in admin panel. This color picker is used only for demonstation purposes.</span>
+    </div>
+</div> {% endcomment %}
+
+<script src="{% static '/main_app/js/jquery.js' %}"></script>
+<script src="{% static '/main_app/js/popper.min.js' %}"></script>
+<script src="{% static '/main_app/js/bootstrap.min.js' %}"></script>
+
+<!--Revolution Slider-->
+<script src="{% static '/main_app/plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static '/main_app/plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static '/main_app/js/main-slider-script.js' %}"></script>
+{% comment %} <script src="{% static '/main_app/js/mss.js' %}"></script> {% endcomment %}
+<!--End Revolution Slider-->
+<script src="{% static '/main_app/js/jquery.fancybox.js' %}"></script>
+<script src="{% static '/main_app/js/owl.js' %}"></script>
+<script src="{% static '/main_app/js/appear.js' %}"></script>
+<script src="{% static '/main_app/js/wow.js' %}"></script>
+<script src="{% static '/main_app/js/mixitup.js' %}"></script>
+<script src="{% static '/main_app/js/script.js' %}"></script>
+<!--Google Map APi Key-->
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCJyIBI88fFMi5YJ8khAsPX7ouMsIZPorc"></script>
+<script src="{% static '/main_app/js/map-script.js' %}"></script>
+<!--End Google Map APi-->
+<script src="{% static '/main_app/js/color-settings.js' %}"></script>
+</body>
+
+<!-- Mirrored from expert-themes.com/html/motor-expert/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Dec 2019 07:19:28 GMT -->
+</html>

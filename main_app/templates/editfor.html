@@ -1,0 +1,99 @@
+{% load static %} 
+<html>
+<head>
+<style>
+    #a1
+    {
+        
+        margin-top:80px;
+        margin-left:480px;
+
+    }
+    span
+    { 
+        color: red;
+    }
+</style>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+     crossorigin="anonymous"></script> 
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+ 
+ 
+ <!------ Include the above in your HEAD tag ----------> 
+ 
+ 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> 
+ <link href="{% static '/doctorfinder/login.css' %}" rel="stylesheet"> 
+ 
+ 
+ 
+ <div class="container" id="a1"> 
+     <div class="row"> 
+         <div class="col-sm-4"> 
+             <div class="card"> 
+                 <article class="card-body"> 
+                     <h4 class="card-title text-center mb-4 mt-1">Profile Information</h4> 
+                     <hr> 
+                     {% if message %} 
+                     <p class="text-danger text-center">{{message}}</p> 
+                     {% endif %} 
+                     <form method="POST" action="{% url 'editfor' %}"> 
+                         {% csrf_token %} 
+                          {% if user %}
+                         <div class="form-group"> 
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="name" class="form-control" placeholder="Name" type="text" name="name" value="{{user.Foreman_name}}" id='ufn'> 
+                             </div>  
+                             
+                             <span id='reg_name_err'></span>  <br>
+                             {% comment %} <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="email" class="form-control" placeholder="Email" type="email" name="mail" value="{{user.}}"> 
+                             </div>  <br> {% endcomment %}
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <select name="gender" class="form-control">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                </select>
+                             </div>  <br>
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="phone" class="form-control" placeholder="Phone No" type="text" name="phone" value="{{user.Foreman_contact}}" id='up'> 
+                             </div>  <span id="reg_phone_err"></span><br>
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="address" class="form-control" placeholder="Address" type="text" name="address" value="{{user.Foreman_address}}" id='uadd'> 
+                             </div> </div><span id="reg_add_err"></span>
+                        </div>  
+                        {% endif %}
+                         <div class="form-group"> 
+                             <button type="submit" class="btn btn-primary btn-block" id='infosub'> Change Profile </button> 
+                             {% if message %}
+                            <p class="text-danger text-center">{{message}}</p>
+                                {% endif %}
+                         </div>  
+                          
+                          
+                     </form> 
+                 </article> 
+             </div>  
+         </div>  
+     </div>  
+ </div>
+ <script src="{% static '/main_app/js/changeinfo_valid.js' %}"></script> 
+</html>

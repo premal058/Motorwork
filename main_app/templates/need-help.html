@@ -1,0 +1,2075 @@
+{% extends 'base_page.html' %}
+{% block content %}
+{% load static %}
+	<title>Need Help</title>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script  src="{% static '/main_app/js/JQ.js' %}"></script>
+ 
+	<style type="text/css">
+		
+		#hd1
+		{
+			text-align: center;
+			font-size: 30px;
+			font-style: italic;
+			color: brown;
+		}
+		#hd2
+		{
+			text-align: center;
+			font-size: 20px;
+			font-style: 1px solid black;
+
+		}
+		#serbar
+		{
+			width: 450px;
+			height: 50px;
+			font-weight: bold;
+			margin-left:500px;
+			font-size: 20px;
+			margin-top:15px;
+		}
+		.add
+		{
+			column-width: 520px;
+			vertical-align: middle;
+
+		}
+		#serbtn
+		{
+			background-color: red;
+			width: 70px;
+			height: 50px;
+			margin-left: 20px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+			color: white;
+		}
+		#hd3
+		{
+			font-weight: bold;
+			text-align: center;
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		table
+		{
+			width: 550px;
+			align-items: center;
+			margin-left: 10px;
+			margin-top: 20px;
+			border-collapse: collapse;
+			border:2px solid black;
+			 	
+		}
+
+		th
+		{
+			width: 400px;
+			height: 50px;
+			
+			background-color: black;
+			color: white;
+			font-size: 20px;
+			border-color: white;
+
+		}
+		td
+		{
+			width: 400px;
+			height: 80px;
+			background-color: white;
+			color: black;
+			font-size: 20px;
+			border:2px solid black;
+			font-weight: lighter;
+			text-align: center;
+		}
+		tr
+		{
+			border:1px solid black;
+			align:center;
+		}
+	</style>
+
+</head>
+<body>	
+		<div id="main">
+		<div id="hd1"><h1>Search In Emergency..!</h1></div>
+		<div id="hd2"><h2>Search your nearest garage information From Top Areas of Ahemdabad.</h2></div>
+		<div id="frm">
+		
+			<select name="serbar" id="serbar" placeholder="select area">
+				<option value="None" selected>None</option>
+				<option>132 Feet Ring Road </option>
+				<option>Ashram Road</option>
+				<option>Astodiya</option>
+				<option>Bopal</option>
+				<option>Bapunagar</option>
+				<option>Bodakdev</option>
+				<option>C.G Road</option>
+				<option>Chandkheda</option>
+				<option>Chandlodia</option>
+				<option>Civil Hospital road</option>
+				<option>DaniLimda</option>
+				<option>Delhi Gate</option>
+				<option>Drive In Road</option>
+				<option>Gota</option>
+				<option>Geeta Mandir</option>
+				<option>Gurukul</option>
+				<option>Hansol</option>
+				<option>Income Tax</option>
+				<option>Jivraj Park</option>
+				<option>Kalupur</option>
+				<option>Krishna Nagar</option>
+				<option>KuberNagar</option>
+				<option>Lal Darwaja</option>
+				<option>Maninagar</option>
+				<option>Nehru Nagar</option>
+				<option>Navarangpura</option>
+				<option>Odhav</option>
+				
+				<option>Panchvati</option>
+				<option>Paldi</option>
+				<option>S.G Highway</option>
+				<option>Sarangpur</option>
+				<option>Shahibaug</option>
+				<option>Thaltej</option>
+				<option>Vastrapur</option>
+				<option>Vastral</option>
+			</select>
+			<button name="btn" id="serbtn"> Go !</button>
+
+		</div>
+			<p id="hd3">Your result appear here.<p>
+		<span id="error"></span>
+		
+		<div id="tbl1">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">J K Motors</td>
+  			    <td>132 Feet ring Road</td>
+   				<td class="add">Karishma Complex, 132 Feet Ring Road, Behind A P M C Market, Vasna Tolnaka, Jeevraj Park, Near Honey Auto Parts, Ahmedabad-380051</td>
+      			<td>+919998433007</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Sarayu Motors</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>A/1/1, Silicon Vally (Basement), Shivranjani Char Rasta, 132 Feet Ring Road, Satellite, Ahmedabad-380015</td>
+    			<td> +91-79-26764277</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>V S Mistri</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>Behind A P M C Market, Opposite Gate No 3, 132 Feet Ring Road, Gupta Nagar, Jeevraj Park, Near Honey Auto Parts, Ahmedabad-380051</td>
+    			<td>+919825890059</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Bansari Motors</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>132 Feet Ring Road,Satellite,Opp Keshav Baug Party Plot;Nr Himatlal Park Bus Stop, Ahmedabad-380015</td>
+    			<td>-</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Punjab Automobiles</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>13, Akash - 3, Opposite Nirmal Apartment, Near Saptak Party Plot, 132 Feet Ring Road, Near Undreworld Western Outfit, Ahmedabad-38001</td>
+    			<td> +91-79-27457171</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Sharif Auto Mobiles</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>Ronak Park Near A P M C,132 Feet Ring Road,Jeevraj Park,Juhapura, Ahmedabad-380051</td>
+    			<td>+919998458030</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Shakti Auto Mobiles Works</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>107/2, Opposite Shell Petrol Pump, 132 Feet Ring Road, Jivraj Park, Jeevraj Park, Near Honey Auto Parts, Ahmedabad-38005</td>
+    			<td> +919374070036</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Lucky Excel Workers</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>Shreenath Nagar Section - 2, Opposite Manav Petrol Pump, 132 Feet Ring Road, Naranpura, Near Bhakti Surgical & Fitness, Ahmedabad-380052</td>
+    			<td> +919998048654</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Shree Ram Auto Centre</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>Balinath Chowk, 132 Feet Ring Road, Meman Nagar, Naranpura, Road, Meman Nagar, Ahmedabad-380013</td>
+    			<td> +919879271344</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Delite Automobiles</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>132 Feet Ring Road, Beside Chimanbhai Market Gate No 3, Jeevraj Park, Near Honey Auto Parts, Ahmedabad-380051</td>
+    			<td>+919924723134</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Vijay Auto Care</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>Bhagirath Society Road,Tol Naka,Meman Nagar,132 Feet Ring Road, Ahmedabad-380052</td>
+    			<td>-</td>
+    		</tr>
+    		<tr>
+    			<td scope='row'>Sadguru Auto</td>
+    			<td>132 feet ring road</td>
+    			<td class='add'>10, Santgum Society, 132 Feet Ring Road, Jivraj Park, Near Shyam Decorators, Ahmedabad-38005</td>
+    			<td>+91-8530453427</td>
+    		</tr>
+
+			</tbody>
+			</table>
+		</div>
+		
+
+		<div id="tbl2">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">The New Modern Automobiles</td>
+  			    <td>Ashram Road</td>
+   				<td class="add">Pritam Nagar, Ashram Road, Ellisbridge, Ahmedabad-380006</td>
+   				<td> +91-79-26578078</td>
+    		</tr>
+    		<tr>
+    			<td scope="row">Arvish Auto</td>
+    			<td>Ashram Road</td>
+    			<td class="add">Udhampur,Ashram Road,Char Rasta Gujarat,Near Hotel Fortune Landmark, Ahmedabad-380006</td>
+    			<td>-</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Elgi Automotive Service & Diagnostic Equipment</td>
+    			<td>Ashram Road</td>
+    			<td class="add">2nd Floor 5,Mill Officers Colony,Ashram Road, Ahmedabad-380009</td>
+    			<td>-</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Shreyas Automobiles</td>
+    			<td>Ashram Road</td>
+    			<td class="add">Jamanshah Pir Dargah,Ashram Road,Near Jivabhai Chambers,Near Bata Showroom, Ahmedabad-380009</td>
+    			<td>+91-79-26589697</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Navrang Auto Centre</td>
+    			<td>Ashram Road</td>
+    			<td class="add">Shop No 8,Bhavani Chamber,Ashram Road,Navrangpura,Behind Times Of India, Ahmedabad-38000</td>
+    			<td>+919879099580</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Munim Auto</td>
+    			<td>Ashram Road</td>
+    			<td class="add">1,Deshna,Ashram Road,Usmanpura, Ahmedabad-380013</td>
+    			<td>+91-79-27542882</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Ishwar Automobiles</td>
+    			<td>Ashram Road</td>
+    			<td class="add">Ashram Road,Nr United Com Bank, Ahmedabad-380009</td>
+    			<td>-</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Prakash Cycle & Auto Works</td>
+    			<td>Ashram Road</td>
+    			<td class="add"> Behind V S Hospital Bus Stand, Ashram Road, Ellisbridge, Ahmedabad-380007</td>
+    			<td> +919426867857</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Methodex Systems Limited</td>
+    			<td>Ashram Road</td>
+    			<td class="add">204, H K House, Ashram Road, Near Tankshal Pole, Ahmedabad-380009</td>
+    			<td> +91-79-26589162</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Ahmedabad Industrial Corporation</td>
+    			<td>Ashram Road</td>
+    			<td class="add">Ashram Road, Opposite Mount Carmal High School Navranpura, Ahmedabad-380009</td>
+    			<td>+91-79-26582710</td>
+
+    		</tr>
+    		<tr>
+    			<td scope="row">Durga Motors</td>
+    			<td>Ashram Road</td>
+    			<td class="add">1 Jendra Chambers, Near Jaivthar Flat, Behind Ajanta Commercial Centre, Income Tax, Ashram Road, Ahmadabad, Ahmedabad-380009</td>
+    			<td> +919825012332</td>
+
+    		</tr>
+			</tbody>
+			</table>
+		</div>
+		
+
+    	<div id="tbl3">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Aadesh Auto Service</td>
+  			    <td>Astodiya</td>
+   				<td class="add">2149/1, Panchbhai's Khadki, Astodia, Near Astodia Darwaja, Ahmedabad-380001</td>
+   				<td>+919824073004</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+
+
+    	<div id="tbl4">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Chamunda Auto Parts And Service Station</td>
+  			    <td>Bopal</td>
+   				<td class="add"> Near Atmajyoti Apartment,Bopal, Ahmedabad-380058</td>
+   				<td>  +919998346092</td>
+    		</tr>
+    		<tr>
+        			<td>Darshan Moters</td>
+        			<td>Bopal</td>
+        			<td class="add">Shop No 10, Darshan Complex, Bopal, Behind, Umiya Temple, Ahmedabad-380058</td>
+        			<td> +919904014661</td>
+    		</tr>
+    		<tr>
+        			<td>Patel Auto Service Station</td>
+        			<td>Bopal</td>
+        			<td class="add">Bopal-Ghuma Road/ State Highway,Near Bopal Jogger's Park, Ahmedabad-380058</td>
+        			<td> +919904522550</td>
+    		</tr>
+    		<tr>
+        			<td>Mittal Auto Repair</td>
+        			<td>Bopal</td>
+        			<td class="add"> Satyam Complex, Near Abad Nagar Sheth's Vando Bus Stop, Bopal, Ahmedabad-380058</td>
+        			<td> +919425475235</td>
+    		</tr>
+    		<tr>
+        			<td>Umiya Auto Parts & Service Station</td>
+        			<td>Bopal</td>
+        			<td class="add">S No C-9,Bopal Road,Pushottam Nagar,Near Adharsh Hospital, Ahmedabad-380058</td>
+        			<td> +919723019802</td>
+    		</tr>
+    		<tr>
+        			<td>Maruti Auto & Service Station</td>
+        			<td>Bopal</td>
+        			<td class="add">C - 2, Hare Krishna Complex, Opposite Sales India, Bhopal Cross Road, Bopal, Near Shriji Clinic, Ahmedabad-380058</td>
+        			<td> +919879259981</td>
+    		</tr>
+    		<tr>
+        			<td>Meet Motors</td>
+        			<td>Bopal</td>
+        			<td class="add"> 17, Darshan Complex, Behind Umiya Mata Temple, Near Purshottamnagar Bus Stop, Bhopal Cross Road, Bopal, Near Patidar Motors, Ahmedabad-380058</td>
+        			<td> +919824173412</td>
+    		</tr>
+    		<tr>
+        			<td>Umiya Auto Servicing Station</td>
+        			<td>Bopal</td>
+        			<td class="add">26, Suncity Mall, Sardar Patel Ring Road, Bopal, Near Mahadev Flour Factory, Ahmedabad-380058</td>
+        			<td>+919601935082</td>
+    		</tr>
+    		<tr>
+        			<td>Shraddha Auto Care</td>
+        			<td>Bopal</td>
+        			<td class="add">3, Western Park Opposite New York Darshan, Bhopal Road, Bopal, Near Mansi Selection, Ahmedabad-380058</td>
+        			<td> +919824036093</td>
+    		</tr>
+    		<tr>
+        			<td>Patidar Motors</td>
+        			<td>Bopal</td>
+        			<td class="add"> Shop No - 2, Trimurti Complex, Opposite S B I Bank, Bhopal Road, Bopal, Near Patidar Motors, Ahmedabad-380058</td>
+        			<td>+919723782050</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl5">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Parag Auto Centre</td>
+  			    <td>Bapunagar</td>
+   				<td class="add"> A-15,Manpasand Complex,Bapu Nagar,Behind Samjuba Hospital, Ahmedabad-380024</td>
+   				<td>  +91-79-22730855</td>
+    		</tr>
+    		<tr>
+        			<td>Geeta Auto Works</td>
+        			<td>Bapunagar</td>
+        			<td class="add"> C/17,Parshwanath Park,Bapu Nagar,Opp Tapovan;Nr Adhunik Park, Ahmedabad-380024</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Maruti Service Station</td>
+        			<td>Bapunagar</td>
+        			<td class="add">Shade No 24,Harshad Estate,Margha Farm Compound,Nr Viratnagar Char Rasta,Bapu Nagar, Ahmedabad-380024</td>
+        			<td> +91-79-22732159</td>
+    		</tr>
+    		<tr>
+        			<td>Pavan Auto Service</td>
+        			<td>Bapunagar</td>
+        			<td class="add">Khodiyar Nagar Char Rasta,Nh No-8,Opp Jain Mandir,Bapu Nagar, Ahmedabad-382350</td>
+        			<td> +919427950139</td>
+    		</tr>
+    		<tr>
+        			<td>Garibnavaz Auto Body Repairing</td>
+        			<td>Bapunagar</td>
+        			<td class="add">Shop No 1-2,Aman Madrasa,Opp S P Office,Stadium Road,Bapu Nagar, Ahmedabad-380024</td>
+        			<td>+919824658348</td>
+    		</tr>
+    		<tr>
+        			<td>Shreenath Motors</td>
+        			<td>Bapunagar</td>
+        			<td class="add">6,Mahadev Nagar,Bapu Nagar,Nr Jalaram Society, Ahmedabad-380024</td>
+        			<td> +919426527049</td>
+    		</tr>
+    		<tr>
+        			<td>Viany Auto Garage</td>
+        			<td>Bapunagar</td>
+        			<td class="add">Diamand Market, Bapu Nagar, Lal Bahadur Shastri Road, Ahmedabad-380024</td>
+        			<td> +918758230704</td>
+    		</tr>
+    		<tr>
+        			<td>Shivshakti Auto Garage</td>
+        			<td>Bapunagar</td>
+        			<td class="add"> Shop No-5,Bapu Nagar,Opp Shyam Shikhar, Ahmedabad-380024</td>
+        			<td> +919327087822</td>
+    		</tr>
+    		<tr>
+        			<td>Shree Arbuda Auto Body Repairs</td>
+        			<td>Bapunagar</td>
+        			<td class="add">D - 4, Bhagvatinagar Part - 1, Near - Raghunath School, L B Shastri Road, Bapu Nagar, Near Raaring Digital, Ahmedabad-382345</td>
+        			<td> +919924534455</td>
+    		</tr>
+    		<tr>
+        			<td>Bhole Auto</td>
+        			<td>Bapunagar</td>
+        			<td class="add">42,Hiren Chambers,Lilanagar Cross Road,Bapu Nagar, Ahmedabad-380024</td>
+        			<td>-</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl6">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Karoravate Motor</td>
+  			    <td>Bodakdev</td>
+   				<td class="add">13,14,15,Sagar Appt,Near Sandesh Press,Opp Sarathi Hotel,Bodakdev, Ahmedabad-38005</td>
+   				<td> +919998866888</td>
+    		</tr>
+    		<tr>
+        			<td>Kapadia Automobile Private Limited</td>
+        			<td>Bodakdev</td>
+        			<td class="add">Judges Bunglow Road,Bodakdev,Nr Patel Farm, Ahmedabad-380059</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Raj Auto Gas</td>
+        			<td>Bodakdev</td>
+        			<td class="add">Satkar,Judges Bunglow Cross Road,Bodakdev,Near Sambhav Press, Ahmedabad-380015</td>
+        			<td>+919228420005</td>
+    		</tr>
+    		<tr>
+        			<td>Khyati Motors</td>
+        			<td>Bodakdev</td>
+        			<td class="add">3,Ul-A,Mohini Tower,Nr Hotel Pride,Bodakdev, Ahmedabad-380054</td>
+        			<td>+91-79-30024953</td>
+    		</tr>
+    		<tr>
+        			<td>Bhatia Bike Zone</td>
+        			<td>Bodakdev</td>
+        			<td class="add">1,2,3,Prime Plaza,Opp Dla School,Nfd Circle,Bodakdev, Ahmedabad-380054</td>
+        			<td> +919825153054</td>
+    		</tr>
+    		<tr>
+        			<td>Secure Auto</td>
+        			<td>Bodakdev</td>
+        			<td class="add">S G Highway,Bodakdev,Opp Rajpath Club,Nr Uti Bank,Near Exirl Bank, Bodakbev, Ahmedabad-380059</td>
+        			<td>+919825020007</td>
+    		</tr>
+    		<tr>
+        			<td>Pooja Automobiles</td>
+        			<td>Bodakdev</td>
+        			<td class="add">7b,Sankalp Apartment,Judges Bunglow Road,Bodakdev,Opp Sharaddha Petrol Pump3, Ahmedabad-380054</td>
+        			<td>+91-79-26870062</td>
+    		</tr>
+    		<tr>
+        			<td>Shree Bahuchar Bike Care</td>
+        			<td>Bodakdev</td>
+        			<td class="add">11, Satkar Complex, Near Sambhav Press, Opposite Aakash Tower Lane, Judges Bunglow Road, Bodakdev, Ahmedabad-380054</td>
+        			<td> +919904475382</td>
+    		</tr>
+    		<tr>
+        			<td>Hari Om Auto Care</td>
+        			<td>Bodakdev</td>
+        			<td class="add">17, Ratna Palace, Opposite Niddhi Apartment, Judges Bunglow Road, Bodakdev, Ahmedabad-380051</td>
+        			<td> +91-79-26871845</td>
+    		</tr>
+    		<tr>
+        			<td>Parshwa Motors</td>
+        			<td>Bodakdev</td>
+        			<td class="add">22, Ff, Kasturi Complex, Opposite Atithi Dinning Hall, Judges Bunglow Road, Bodakdev, Ahmedabad-380015</td>
+        			<td>+919825841151</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl7">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Ashok Motors</td>
+  			    <td>C.G Road</td>
+   				<td class="add"> Liberty Complex,C G Road,Navrangpura, Ahmedabad-380009</td>
+   				<td>+91-79-26466717</td>
+    		</tr>
+    		<tr>
+        			<td>Orange Autobahns</td>
+        			<td>C.G Road</td>
+        			<td class="add"> 3, Amit Enclave, Opposite Shagun Complex, Swastik Society, Behind Xaviers Girls Hostel, C G Road, Navrangpura, Kamal Colony Road, Ahmedabad-38000</td>
+        			<td> +91-79-65454505</td>
+    		</tr>
+    		<tr>
+        			<td>Kataria Automobiles Limited</td>
+        			<td>C.G Road</td>
+        			<td class="add">208,Samir Complex,Sankalp Restaur,C G Road,Opp Muncipal Market, Ahmedabad-380015</td>
+        			<td>+91-79-22174300</td>
+    		</tr>
+    		<tr>
+        			<td>Cargo Motors Guj Private Limited</td>
+        			<td>C.G Road</td>
+        			<td class="add">Animesh, C G Road, Opposite Union Bank Of India, Panchavati, Ahmedabad-380006</td>
+        			<td> +91-79-66097000</td>
+    		</tr>
+    		<tr>
+        			<td>Ford Service</td>
+        			<td>C.G Road</td>
+        			<td class="add"> Behind Cargo Ford, C G Road, Panchavati, Near Ing Vyasa Bank, Near Dr Adeshra Palmist Centre, Ahmedabad-380006</td>
+        			<td>+91-79-26448212</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+
+    	<div id="tbl8">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Chirag Cycle And Scooter Repairing Works</td>
+  			    <td>Chandkheda</td>
+   				<td class="add">170, Shantikunj Shopping Centre, I O C Road, Near Apollo Pharamacy, Near Ossam Wear It Proud, Ahmedabad-382424</td>
+   				<td>  +91-79-27502127</td>
+    		</tr>
+    		<tr>
+        			<td>Shivam Bikes Center</td>
+        			<td>Chandkheda</td>
+        			<td class="add">Sopan, Chandkheda, Near Palace Society, Near Amts Bus Stop, Ahmedabad-382424</td>
+        			<td> +919825265476</td>
+    		</tr>
+    		<tr>
+        			<td>Vijay Jalodia Motor Body Works</td>
+        			<td>Chandkheda</td>
+        			<td class="add">H/12, Karnavati Society, Guj Housing Board, Chandkheda, Ahmedabad-382424</td>
+        			<td>+91-79-23297459</td>
+    		</tr>
+    		<tr>
+        			<td>Verai Auto Garage</td>
+        			<td>Chandkheda</td>
+        			<td class="add">Ioc Road,Opp Sbi,Chandkheda, Ahmedabad-382424</td>
+        			<td> +919898764420</td>
+    		</tr>
+    		<tr>
+        			<td>Krishna Auto Garaje</td>
+        			<td>Chandkheda</td>
+        			<td class="add">Vaishnodevi Complex, Opposite Highway Mall, Near Green Cross Pathology Laboratory, Ahmedabad-380005</td>
+        			<td> +919725597337</td>
+    		</tr>
+    		<tr>
+        			<td>Bansi Motors & Service Station</td>
+        			<td>Chandkheda</td>
+        			<td class="add">1,Swagatestate-1,Chandkheda,Near Visat Petrolpump, Ahmedabad-380000</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Ram Auto Care</td>
+        			<td>Chandkheda</td>
+        			<td class="add"> 2, Vaishnavdevi Complex, Near Nirav Palace, Kalol Road, Chandkheda, Ahmedabad-380005</td>
+        			<td>+919898195775</td>
+    		</tr>
+    		<tr>
+        			<td>Brahumani Motors</td>
+        			<td>Chandkheda</td>
+        			<td class="add">Shop No 25, Shamal Complex, New C G Road, Chandkheda, Near Jay Mahakali Fabrication, Ahmedabad-382424</td>
+        			<td> +919825766440</td>
+    		</tr>
+    		<tr>
+        			<td>Omkar Motors</td>
+        			<td>Chandkheda</td>
+        			<td class="add"> Omakar Complex,National Highway,Chandkheda,On Way Of Kalol Road Corner, Ahmedabad-380005</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Mahakali Auto Services</td>
+        			<td>Chandkheda</td>
+        			<td class="add">Shop No - 11, Shanti Niketan Shopping Center, Near Vegetable Market, D Cabin, I O C Road, Chandkheda, Near Siddheshwari Sari, Ahmedabad-380019</td>
+        			<td>+919925156556</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+
+    	<div id="tbl9">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Natraj Auto & Service Centre</td>
+  			    <td>Chandlodia</td>
+   				<td class="add">11,Ghanshyam Shopping Center,Chandiodia,B/H Badiyadev Mandir, Ahmedabad-382481</td>
+   				<td> +91-79-27606012</td>
+    		</tr>
+    		<tr>
+        			<td>World Auto</td>
+        			<td>Chandlodia</td>
+        			<td class="add">B - 7 - A - 1, 2, 3, Prakashnagar, Near Ramdevpir Mandir, Gota Road, Chandiodia, Ahmedabad-382481</td>
+        			<td>: +91-79-27601937</td>
+    		</tr>
+    		<tr>
+        			<td>Jay Ambe Motor Garage</td>
+        			<td>Chandlodia</td>
+        			<td class="add"> Near Chandiodia Over Bridge, Dhanjibhai Kuva, Chandiodia, Chandlogiya, Ahmedabad-380081</td>
+        			<td>+919327063178</td>
+    		</tr>
+    		<tr>
+        			<td>Bahuchar Auto</td>
+        			<td>Chandlodia</td>
+        			<td class="add">Manilalnagar Shopping Center,Dhanjibhai No Kuvo,Chandiodia, Ahmedabad-38248</td>
+        			<td>-</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+
+    	<div id="tbl10">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Shankar Auto</td>
+  			    <td>Civil Hospital road</td>
+   				<td class="add">Baliya Limbadi Road, Civil Hospital Road, Asharwa, Near Mahakali Cycle, Ahmedabad-380016</td>
+   				<td>  +919347440229</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl11">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Bengal Electric</td>
+  			    <td>DaniLimda</td>
+   				<td class="add">30 Grd Floor,Allishan Shopping Centre,Danilimda Road, Opp Gujrat Craft, Ahmedabad-380028</td>
+   				<td>+91-79-25354759</td>
+    		</tr>
+    		<tr>
+        			<td>Shakti Auto Garage</td>
+        			<td>DaniLimda</td>
+        			<td class="add">Beral Mareket, Narol Road, Danilimda, Near Patel Decoraters, Near Dilhi Fabrication, Ahmedabad-380028</td>
+        			<td> +919377360712</td>
+    		</tr>
+    		<tr>
+        			<td>Viral Auto Centre</td>
+        			<td>DaniLimda</td>
+        			<td class="add">Plesant Complex, Shyam Kabadi Market No 4, Danilimda Road, Danilimda, Near Patel Mobile, Ahmedabad-380028</td>
+        			<td>+919825261268</td>
+    		</tr>
+    		<tr>
+        			<td>Majid Auto Works</td>
+        			<td>DaniLimda</td>
+        			<td class="add"> 15,Dhruv Nagar Society,Danilimda Village,Danilimda, Ahmedabad-380022</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Madan Motors</td>
+        			<td>DaniLimda</td>
+        			<td class="add">Near Shyam Kabadi Market, Narol Road, Danilimda, Near Patel Decoraters, Near Dilhi Fabrication, Ahmedabad-380028</td>
+        			<td> +919924676240</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+
+    	<div id="tbl12">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Kailash Auto Engg Work</td>
+  			    <td>Delhi Gate</td>
+   				<td class="add">Muni Shop No 91,Delhi Gate,Inside Delhi Darwaja, Ahmedabad-380001</td>
+   				<td>  +91-79-22167975</td>
+    		</tr>
+    		<tr>
+        			<td>Bajaj Auto Service</td>
+        			<td>Delhi Gate</td>
+        			<td class="add">Bajaj Auto Service Delhi Outside Delhi Gate, Delhi Gate, Near Manish Traders, Ahmedabad-380019</td>
+        			<td> +919374218378</td>
+    		</tr>
+    		<tr>
+        			<td>Aai Shri Khodiyar Auto Garage</td>
+        			<td>Delhi Gate</td>
+        			<td class="add">Ramnapur Patel House Near Vinod Chambers, Outside, Dariapur Gate, Delhi Gate, Near Manish Traders, Ahmedabad-380019</td>
+        			<td> +919904525246</td>
+    		</tr>
+    		<tr>
+        			<td>New Delux Automobile Consult</td>
+        			<td>Delhi Gate</td>
+        			<td class="add">128/129,Delhi Gate,Ajmeri Nr Salatwada, Ahmedabad-380001</td>
+        			<td> +919998329581</td>
+    		</tr>
+    		<tr>
+        			<td>Mahakali Auto Repairing</td>
+        			<td>Delhi Gate</td>
+        			<td class="add">149254,Opposite Vinod Chamber,Outside Dariapur Gate,Delhi Gate, Ahmedabad-38000</td>
+        			<td> +91-79-22142119</td>
+    		</tr>
+    	
+    		</tbody>
+    		</table>
+    	</div>
+
+    	<div id="tbl13">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Rajesh Cycle Repairing Works And Auto Centre</td>
+  			    <td>Drive IN Road</td>
+   				<td class="add">7 Sunrise Shopping Centre, Near Asia School, Drive In Road, Near Star Sitara, Ahmedabad-380054</td>
+   				<td>  +919898892443</td>
+    		</tr>
+    		<tr>
+        			<td>Shive Auto Center</td>
+        			<td>Drive IN Road</td>
+        			<td class="add"> Opp Manav Mandir,Vatinath Nagar,Drive In Road,Mamnagar, Ahmedabad-380052</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Sai Auto Care</td>
+        			<td>Drive IN Road</td>
+        			<td class="add"> Shop No - 3, 4, Avishkar Tenament, Opposite T V Tower On Sun N Step Club Road, Drive In Road, Thaltej, Near K M Auto Track, Ahmedabad-380054</td>
+        			<td> +919824358892</td>
+    		</tr>
+    		<tr>
+        			<td>Yash Motor</td>
+        			<td>Drive IN Road</td>
+        			<td class="add"> Drive In Road,Meman Nagar,Opp Manav Mandir, Ahmedabad-380052</td>
+        			<td> +919879173274</td>
+    		</tr>
+    		<tr>
+        			<td>Dahison Motor</td>
+        			<td>Drive IN Road</td>
+        			<td class="add">Drive In Road,Nr Manav Mandir, Ahmedabad-380052</td>
+        			<td> +91-79-27493339</td>
+    		</tr>
+    		<tr>
+        			<td>Bhagvati Motors</td>
+        			<td>Drive IN Road</td>
+        			<td class="add">B/2 Sun Rise Shopping Center, Opposite Indra Prashth Tower, Drive In Road, Ahmedabad-380054</td>
+        			<td> +919898214921</td>
+    		</tr>
+    		<tr>
+        			<td>Trishul Motors</td>
+        			<td>Drive IN Road</td>
+        			<td class="add">B/H Drive In Petrol Pump,Drive In,Drive In Road, Ahmedabad-380052</td>
+        			<td> +919825848814</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+
+    	<div id="tbl14">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">International Automobile</td>
+  			    <td>Gota</td>
+   				<td class="add"> Gota Cross Road,Gota,Near Umiya Weigh Bridge, Ahmedabad-380000</td>
+   				<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Jatin Auto Parts</td>
+        			<td>Gota</td>
+        			<td class="add">Gandhinagar Highway,Gota,Nr Arvind Petrol Pump;Nr Hotel Poonam, Ahmedabad-382481</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Jay Ambe Motors</td>
+        			<td>Gota</td>
+        			<td class="add"> Gota Char Rasta/ Sarkhej-Gandhinagar Highw,Gota,Nr Gurunanak Hotel,Opp Adani C N & Pump, Ahmedabad-382481</td>
+        			<td> +919825323144</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    		
+    		 
+    	</div>
+    	<div id="tbl15">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">D N Automobiles</td>
+  			    <td>Geeta Mandir</td>
+   				<td class="add"> S T Bus Stand, Geeta Mandir Road, Jagannath Ji Mandir Road, St Char Rasta, Ahmedabad-380022</td>
+   				<td>  +91-79-25392804</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl16">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Punjab Honda</td>
+  			    <td>Gurukul</td>
+   				<td class="add">Maruti Centre, Near Gurukul, Drive In Road, Gurukul, Ahmedabad-380052</td>
+   				<td>+91-79-27457171</td>
+    		</tr>
+    		<tr>
+        			<td>Universal Automobiles</td>
+        			<td>Gurukul</td>
+        			<td class="add"> Sonal Char Rasta,Gurukul Road,Meman Nagar,Opp Amarkunj Flat, Ahmedabad-380052</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Dharm Jivan Auto Service</td>
+        			<td>Gurukul</td>
+        			<td class="add"> Tarun Nagar Sheth's Vando Society, Gurukul Road, Meman Nagar, Near Baoiruma Pan Parlour, Ahmedabad-382415</td>
+        			<td> +91-79-77448080</td>
+    		</tr>
+    		<tr>
+        			<td>Car Care Service Station</td>
+        			<td>Gurukul</td>
+        			<td class="add"> A/4,Neelam Park Society,Gurukul Road,Meman Nagar,Nr Subhash Chowk, Ahmedabad-380052</td>
+        			<td>+91-79-27491407</td>
+    		</tr>
+    		<tr>
+        			<td>India Auto</td>
+        			<td>Gurukul</td>
+        			<td class="add">Gurukul Road,Subhash Chowk,Nr Maruti Complex, Ahmedabad-380052</td>
+        			<td> +91-79-27436411</td>
+    		</tr>
+    		<tr>
+        			<td>Bhagyalaxmi Motors</td>
+        			<td>Gurukul</td>
+        			<td class="add"> 4,Rushabh Complex,Nr Sarjan Towers,Gurukul Road,Meman Nagar, Ahmedabad-380052</td>
+        			<td> +919898079252</td>
+    		</tr>
+    		<tr>
+        			<td>Dharmjivan Auto Service</td>
+        			<td>Gurukul</td>
+        			<td class="add">1, Chinmay Tower, Subhash Chowk, Gurukul Road, Meman Nagar, Ahmedabad-380052</td>
+        			<td> +919428412675</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl17">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Super Auto Repairing Works</td>
+  			    <td>Hansol</td>
+   				<td class="add"> Hansol,Sardar Nagar,Nr Chadrabhanu Talkies, Ahmedabad-382475</td>
+   				<td> +919426590483</td>
+    		</tr>
+    		<tr>
+        			<td>New Sahyog Automobiles</td>
+        			<td>Hansol</td>
+        			<td class="add">3,Jayambe Shopping Center,Hansol,Nr Chandrbhanu Cinema, Ahmedabad-382475</td>
+        			<td> +919327043222</td>
+    		</tr>
+    		<tr>
+        			<td>Guru Krupa Motors</td>
+        			<td>Hansol</td>
+        			<td class="add">Hansol,Higway Road,Sardar Nagar,Nr Chandra Bhanu Theter,Opp Sona Park, Ahmedabad-382475</td>
+        			<td>+919327695870</td>
+    		</tr>
+    		
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl18">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Jay Hind Bikes Point</td>
+  			    <td>Income Tax</td>
+   				<td class="add"> B - 12, Oxford Avenue - B, Near C U Shah College, Income Tax Circle, Ashram Road, Ahmedabad-380006</td>
+   				<td>  +919974358540</td>
+    		</tr>
+    		<tr>
+        			<td>Biren Motors Private Limited</td>
+        			<td>Income Tax</td>
+        			<td class="add">L-3/4,Basement,Samruddhi Building,Income Tax Circle,Behind Navdeep Building,Opp Guj High Court,Opp Sakar-3, Ahmedabad-380014</td>
+        			<td> +91-79-27541899</td>
+    		</tr>
+    		<tr>
+        			<td>Devi Motors</td>
+        			<td>Income Tax</td>
+        			<td class="add"> B-34,1St Floor,Ajanta Commercial Center,Income Tax Ashram Road, Ahmedabad-380009</td>
+        			<td>+919428361045</td>
+    		</tr>
+    		
+    		</tbody>
+    		</table>
+    	</div>
+
+		<div id="tbl19">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Wilson Garage</td>
+  			    <td>Jivraj Park</td>
+   				<td class="add">Opp/ Gate No 3 Apmc Market, 132 Ring Road, Gupta Nagar, Jivraj Park, Near Shyam Decorators, Ahmedabad-380051</td>
+   				<td> +919825336368</td>
+    		</tr>
+    		<tr>
+        			<td>Sadguru Auto</td>
+        			<td>Jivraj Park</td>
+        			<td class="add">: 10, Santgum Society, 132 Feet Ring Road, Jivraj Park, Near Shyam Decorators, Ahmedabad-380051</td>
+        			<td> +918530453427
+</td>
+    		</tr>
+    		<tr>
+        			<td>Shakti Auto Mobiles Works</td>
+        			<td>Jivraj Park</td>
+        			<td class="add">107/2, Opposite Shell Petrol Pump, 132 Feet Ring Road, Jivraj Park, Jeevraj Park, Near Honey Auto Parts, Ahmedabad-380051</td>
+        			<td> +919374070036</td>
+    		</tr>
+    		<tr>
+        			<td>Chamunda Bike Care</td>
+        			<td>jivraj Park</td>
+        			<td class="add">Ravinagar Gam V-2,B/H Mahakali Mandir,Jivraj Park, Ahmedabad-380051</td>
+        			<td> +919327013403</td>
+    		</tr>
+    		<tr>
+        			<td>Cargo Motors</td>
+        			<td>Jivraj Park</td>
+        			<td class="add">Gupta Nagar 132 Ring Road Jivraj Park, Jivraj Park, Near Shyam Decorators, Ahmedabad-380051</td>
+        			<td> +919227215274</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl20">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Premiet Motar Repowering Services</td>
+  			    <td>Kalupur</td>
+   				<td class="add">620/56,Revabhai Dharmshala,Kalupur,Opp Old Railway Station, Ahmedabad-380002</td>
+   				<td>  +91-79-22136327</td>
+    		</tr>
+    		<tr>
+        			<td>Neelu Motors</td>
+        			<td>Kalupur</td>
+        			<td class="add"> Kapasi Bazar,Narol Sarkhej Highway,Kalupur,Behind Maruti Garage, Ahmedabad-380001</td>
+        			<td>+91-79-22976181</td>
+    		</tr>
+    		<tr>
+        			<td>Janta Motor Repairing Service</td>
+        			<td>Kalupur</td>
+        			<td class="add">Kalupur,Opp New Rly Station;Nr Tele Exchange, Ahmedabad-380002</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Sagar Auto Garage</td>
+        			<td>Kalupur</td>
+        			<td class="add"> Near Goswami Building, Dhudhwala's Pol, Near Suraj Mucial Stores, Near Jagdish Offset, Ahmedabad-38000</td>
+        			<td> +919898326302</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl21">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Balark Auto Center</td>
+  			    <td>Krishna Nagar</td>
+   				<td class="add">Krishna Nagar,Parshwanath Road,Opp S S B P Camp, Ahmedabad-380000
+				</td>
+   				<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Shree But Bhavani Auto Garage</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add">Krishna Nagar, Maharana Pratap Choke, Near Chandraballi Vasudev Gupata, Near Vaisuja Parlour, Ahmedabad-382346</td>
+        			<td>+919601487620</td>
+    		</tr>
+    		<tr>
+        			<td>Jay Yogeshwar Auto Garage</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add">8,Dahyabhai Chambers,Priya Talkies,Krishna Nagar, Ahmedabad-382346</td>
+        			<td> +919825930310</td>
+    		</tr>
+    		<tr>
+        			<td>Laxi Aouto Service</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add">Sanjaynagar, Opposite S T Depo, National Highway No 8, Krishna Nagar, Near Shri Ganesh Store, Ahmedabad-382245</td>
+        			<td> +919825526315</td>
+    		</tr>
+    		<tr>
+        			<td>Shree Ji Auto Service</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add"> Parvati Complex, Near Bapa Sitaram Chowk, Hari Village Road, Krishna Nagar, Near Shree Ji Auto Service, Near Gujrat Shuting Sharting And Telaring, Ahmedabad-382350</td>
+        			<td>+919824520245</td>
+    		</tr>
+    		<tr>
+        			<td>Mahalaxmi Auto Garaj</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add">42, Saraj Shopping Center, Parshwanath Township, Krishna Nagar, New Naroda, Near Parshwanath Vasan Shop, Ahmedabad-382330</td>
+        			<td> +919824584952</td>
+    		</tr>
+    		<tr>
+        			<td>Maruti Sales & Service</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add"> Next To Shree Umiyana Nagar Sheth's Vando Society, Krishna Nagar, Canal Road, Near Shri Chamunda Kirana Stores, Ahmedabad-382346</td>
+        			<td>+91-79-22844432</td>
+    		</tr>
+    		<tr>
+        			<td>O Car Auto Garaj Service</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add"> Near Vijay Park Brts Stop N H - 8, Krishna Nagar, Near Manoj Motor, Near Soham Store, Ahmedabad-382345</td>
+        			<td> +919925185588</td>
+    		</tr>
+    		<tr>
+        			<td>Vivek Bikes & Bajaj Auto Service</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add">8,Sunrise Shopping Centre,Krishna Nagar,Opp Upasna School,Nr Canal, Ahmedabad-382346</td>
+        			<td> +919426358347</td>
+    		</tr>
+    		<tr>
+        			<td>Mahaleali Auto Service</td>
+        			<td>Krishna Nagar</td>
+        			<td class="add">Krishna Nagar, Maharana Pratap Choke, Near Chandraballi Vasudev Gupata, Near Vaisuja Parlour, Ahmedabad-382346</td>
+        			<td>+918000633743</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	
+    	<div id="tbl22">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Hariom Auto Center</td>
+  			    <td>Kuber Nagar</td>
+   				<td class="add">Vijay Complex,Near Parth Apartments,Kuber Nagar, Ahmedabad-382475</td>
+   				<td>+919998285570</td>
+    		</tr>
+    		<tr>
+        			<td>Meera Motors And Service Station</td>
+        			<td>Kuber Nagar</td>
+        			<td class="add">2, Rameshwar Estate, Part 2, Opposite Divya Vijay Park, National Highway No 8, Kuber Nagar, Saijpur Bogha, Ahmedabad-382350</td>
+        			<td> +919725694960</td>
+    		</tr>
+    		<tr>
+        			<td>Ganshyam Auto Sarvice</td>
+        			<td>Kuber Nagar</td>
+        			<td class="add">S No 158,Rajavir Road,Near Rajaveer Kubernagar Bus Station,Kuber Nagar, Ahmedabad-382340Shri Laxmi Auto Service</td>
+        			<td> +919998319060</td>
+    		</tr>
+    		<tr>
+        			<td>Shri Laxmi Auto Service</td>
+        			<td>Kuber Nagar</td>
+        			<td class="add">16,Bhoomi Society,Bhargav Road,Kuber Nagar, Ahmedabad-380016</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Arbuda Auto Centre</td>
+        			<td>Kuber Nagar</td>
+        			<td class="add">H No 3-4,Maharshi Dayanand Road,Bungalow Area,Near Somnath Mahadev,Kuber Nagar, Ahmedabad-382475</td>
+        			<td> +91-79-22814060</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl23">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Ahmedabad Motors</td>
+  			    <td>Lal Darwaja</td>
+   				<td class="add">Lal Darwaja,Opp Dinbhai Tower, Ahmedabad-380001</td>
+   				<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Gujarat Auto Electric & Diesel Service</td>
+        			<td>Lal Darwaja</td>
+        			<td class="add">Lal Darwaja,Near Electricity House, Ahmedabad-380001</td>
+        			<td>-</td>
+    		</tr>
+
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl24">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Ambica Auto Center</td>
+  			    <td>Maninagar</td>
+   				<td class="add"> Pushpanjali Rout, 3, Chandrawati Society, Opposite Cosmos Bank, Bhairavnath, Mani Nagar, Ahmedabad-380008</td>
+   				<td>+919824335738</td>
+    		</tr>
+    		<tr>
+        			<td>Everest Auto Centre</td>
+        			<td>Maninagar</td>
+        			<td class="add"> Jivram Plaza,Vallabh Wadi,Bhairavnath Road,Mani Nagar, Ahmedabad-380008</td>
+        			<td>+91-79-25402775</td>
+    		</tr>
+    		<tr>
+        			<td>Gallops Motors Private Limited</td>
+        			<td>Maninagar</td>
+        			<td class="add">A/8,9,10,11,12,13,14,Radhe Sh,Opposite Ing Mall,Khokhara,Mani Nagar, Ahmedabad-380008</td>
+        			<td> +919909992111</td>
+    		</tr>
+    		<tr>
+        			<td>D. J. Automobiles</td>
+        			<td>Maninagar</td>
+        			<td class="add">13,Hima Park Society,Part - II,Nr Jasoda Nagar Chokdi Mani Nagar,Mani Nagar, Ahmedabad-380008</td>
+        			<td>+919825338709</td>
+    		</tr>
+    		<tr>
+        			<td>New Hill Garden Auto Centre</td>
+        			<td>Maninagar</td>
+        			<td class="add">4,Vrundavan Avenue,Mani Nagar,Opp Jay Hind School, Ahmedabad-380008</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>J B Auto Centre</td>
+        			<td>Maninagar</td>
+        			<td class="add"> 5,Sheetal Plaza Complex,Rambaug Road,Maninagar, Ahmedabad-380008</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Bhadrakali Multi Works</td>
+        			<td>Maninagar</td>
+        			<td class="add">No 3,Delux Apartment,Opp Gudluck Hall,Daxini Road,Maninagar, Ahmedabad-380008</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>P & P Auto</td>
+        			<td>Maninagar</td>
+        			<td class="add">3 A,Everest Park,Gordhan Wadi,Mani Nagar, Ahmedabad-380028</td>
+        			<td> +919825325886</td>
+    		</tr>
+    		<tr>
+        			<td>Wembley Motors</td>
+        			<td>Maninagar</td>
+        			<td class="add">2/3/4/5,Chitrakutdham Society,Mani Nagar,B/H Avkar Hall, Ahmedabad-380008</td>
+        			<td>+91-79-25468628</td>
+    		</tr>
+    		<tr>
+        			<td>I Shree Khodiyar Auto Centere</td>
+        			<td>Maninagar</td>
+        			<td class="add">29,Sagar Society,Uttamnagar,Mani Nagar, Ahmedabad-380008</td>
+        			<td>-</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl25">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Aakash Bike & Kinetic Care</td>
+  			    <td>Nehru Nagar</td>
+   				<td class="add">Jain Derasar,Nehru Nagar,Opp Tagore Park, Ahmedabad-380015</td>
+   				<td> +919879095595
+</td>
+    		</tr>
+    		<tr>
+        			<td>New Merit Automobiles</td>
+        			<td>Nehru Nagar</td>
+        			<td class="add">Manekbhavan,Nehru Nagar Char Rasta,Ambavadi, Ahmedabad-380000</td>
+        			<td>-</td>
+    		</tr>
+    		
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl26">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Shree Ganesh Engineering Work</td>
+  			    <td>Navarangpura</td>
+   				<td class="add">20, Stadium Circle House, Opposite, Municipal Sweemingpool, Navrangpura, Near Vidhi Travels, Ahmedabad-380009</td>
+   				<td> +919173033980</td>
+    		</tr>
+    		<tr>
+        			<td>Maniar Auto Service</td>
+        			<td>Navarangpura</td>
+        			<td class="add">Swastik Char Rasta,University Road,Navrangpura,Opp Surendra Petrol Pump, Ahmedabad-380009 </td>
+        			<td>+91-79-26443757</td>
+    		</tr>
+    		<tr>
+        			<td>Apurva Auto Engrs</td>
+        			<td>Navarangpura</td>
+        			<td class="add">2a,Samartheshwr Mahadev Compound,Navrangpura,Nr Law College, Ahmedabad-380009</td>
+        			<td> +91-79-26408151</td>
+    		</tr>
+    		<tr>
+        			<td>Bike Care Service Station</td>
+        			<td>Navarangpura</td>
+        			<td class="add">15,Kalpana Society,Navrangpura,B/H Navrangpura Post Office, Ahmedabad-380009</td>
+        			<td>+91-79-26564654</td>
+    		</tr>
+    		<tr>
+        			<td>Narayan Auto Service</td>
+        			<td>Navarangpura</td>
+        			<td class="add">2,Darshan Complex,Com To Stadium Five Road,Navrangpura,Opp Patel Park Society, Ahmedabad-380009</td>
+        			<td> +91-79-26445912</td>
+    		</tr>
+    		<tr>
+        			<td>Ankit Automobiles</td>
+        			<td>Navarangpura</td>
+        			<td class="add">Sardar Patel Stadium Road,Navrangpura,Opp Vimal House, Ahmedabad-380000</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Navrang Auto Centre</td>
+        			<td>Navarangpura</td>
+        			<td class="add">Shop No 8,Bhavani Chamber,Ashram Road,Navrangpura,Behind Times Of India, Ahmedabad-380001</td>
+        			<td> +919879099580</td>
+    		</tr>
+    		<tr>
+        			<td>Prakash Auto Service</td>
+        			<td>Navarangpura</td>
+        			<td class="add">Darshan Flots, Opposite Nidhi Hospital, Commerce Six Road, Navrangpura, Ahmedabad-380009</td>
+        			<td>+91-79-26445912</td>
+    		</tr>
+    		<tr>
+        			<td>The National Battery Charging & Sons</td>
+        			<td>Navarangpura</td>
+        			<td class="add">The National Battery Charging & Sons</td>
+        			<td>+91-79-27542537</td>
+    		</tr>
+    		<tr>
+        			<td>Pick Up Automobiles</td>
+        			<td>Navarangpura</td>
+        			<td class="add">10, Ashmi Shopping Centre, Near Vijay Char Rasta, Opposite Meman Nagar Fire Station, Navrangpura, Ahmedabad-380009</td>
+        			<td> +91-79-26561212</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	
+    	<div id="tbl27">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Bajaj Service</td>
+  			    <td>Odhav</td>
+   				<td class="add">9, Parvatinagar, Shopping Center, Virat Nagar, Odhav, Ahmedabad-382415</td>
+   				<td> +91-79-22872232</td>
+    		</tr>
+    		<tr>
+        			<td>Jay Ambe Service Station</td>
+        			<td>Odhav</td>
+        			<td class="add">Shop No 6, Shiv Darshan Society, Near Manmohan Park, Nikol Road, Odhav, Near Jagmaya Cycle Mart, Ahmedabad-382415</td>
+        			<td>+918000214408</td>
+    		</tr>
+
+    		<tr>
+        			<td>Harshad Auto Care</td>
+        			<td>Odhav</td>
+        			<td class="add"> 4, Opposite Fire Bridge, Near Asav Packing, Near Balaji Mobile Shop, Ahmedabad-382415</td>
+        			<td> +919904891046</td>
+    		</tr>
+    		<tr>
+        			<td>Shree Hari Auto Garage</td>
+        			<td>Odhav</td>
+        			<td class="add"> 86, Bhikhabhai Saurashtranagar, Near Neelu Petrol Pump, National Highway No 8, Soni Chawl Cross Road Road, Odhav, Near Radhe Welding, Ahmedabad-382415</td>
+        			<td> +919824371604</td>
+    		</tr>
+    		<tr>
+        			<td>Khodal Wheel Alignment And Balancing</td>
+        			<td>Odhav</td>
+        			<td class="add">8, Karnavati Estate, Near Royal Restaurant, Odhav Ring Road Circle, Odhav, Sardar Patel Ring Road, Near Humi Motors, Ahmedabad-382415</td>
+        			<td>+919978908866</td>
+    		</tr>
+    		<tr>
+        			<td>Royal Auto Centre</td>
+        			<td>Odhav</td>
+        			<td class="add"> , Ahmedabad-382415</td>
+        			<td>
+ +919974154842</td>
+    		</tr>
+    		<tr>
+        			<td>Auto Garage</td>
+        			<td>Odhav</td>
+        			<td class="add">Opposite Fire Bridge, Near Asav Packing, Near Balaji Mobile Shop, Ahmedabad-382415</td>
+        			<td> +919825350576</td>
+    		</tr>
+    		<tr>
+        			<td>Sunday Auto Garage</td>
+        			<td>Odhav</td>
+        			<td class="add">Parwati Estate, Near Bhagwati Marriage Hall, Virat Nagar, Odhav, Near Radhe Welding, Ahmedabad-382415</td>
+        			<td> +918401610520</td>
+    		</tr>
+    		<tr>
+        			<td>Parmeshwar Motors</td>
+        			<td>Odhav</td>
+        			<td class="add">12, Gopinath Industrial Estate - 2, Near Shyam Estate, National Highway No 8, Soni Chawl Cross Road, Odhav, Near Radhe Welding, Ahmedabad-382415</td>
+        			<td> +919979229851</td>
+    		</tr>
+    		<tr>
+        			<td>Maya Auto Garage</td>
+        			<td>Odhav</td>
+        			<td class="add">Mahakali Nagar Sheth's Vando, Rajendra Park Road, Odhav, Near Shree Bhrammani Bag House, Ahmedabad-382415</td>
+        			<td> +919714116711</td>
+    		</tr>
+    		<tr>
+        			<td>Simla Motors Maruti Service Station</td>
+        			<td>Odhav</td>
+        			<td class="add">60,Simla House,Mahakali Estate,National Highway No 8,Odhav,Nr Khodiyarnagar Police Chowky, Ahmedabad-382415</td>
+        			<td>-</td>
+    		</tr>
+
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl28">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Anand Auto Service Centre</td>
+  			    <td>Vastral</td>
+   				<td class="add">Alok Tenament, Opposite A M T S Bus Stop, Near Karnavati Bunglow, Takshashila School Road, Vastral, Near Pramukh Motor, Ahmedabad-382415</td>
+   				<td>+919998040553</td>
+    		</tr>
+    		<tr>
+        			<td>But Bhavani Motor Service</td>
+        			<td>Vastral</td>
+        			<td class="add"> Umiya Shopping Center, Nirant Chokadi, Amraiwadi Road, Vastral, Near Laxmi Decoration Mandap, Ahmedabad-382418</td>
+        			<td>+919924690986</td>
+    		</tr>
+    			<tr>
+        			<td>Harikrishna Motors & Auto Electric</td>
+        			<td>Vastral</td>
+        			<td class="add">Shop No 21, Giriver Residency, Opposite Yogeshwar Park, Near Panjara Pole, Arbudanagar Road, Vastral, Near Tanman Bhajipav, Ahmedabad-382418</td>
+        			<td> +918000616183</td>
+    		</tr>
+    			<tr>
+        			<td>Keshar Tyres</td>
+        			<td>Vastral</td>
+        			<td class="add">Shop No 24 25 And 26, Alok Plaza, Near Mamladhar Office, Ring Road Vastral, Ahmedabad-382481</td>
+        			<td> +919925832904</td>
+    		</tr>
+    			<tr>
+        			<td>H M Auto Garage</td>
+        			<td>Vastral</td>
+        			<td class="add"> 1, Nandan 1, Shopping Centre, Near Gurukul Mandir, Nirant Chowkdi, Arbudanagar Road, Vastral, Near Pramukh Motor, Ahmedabad-382415
+</td>
+        			<td> +919898443049</td>
+    		</tr>
+    			<tr>
+        			<td>Maa Shakti Auto Garage</td>
+        			<td>Vastral</td>
+        			<td class="add"> Shivalay - 2, Shopping Center, Opposite Madhav School, Ratanpura, Vastral Road, Vastral, Near Union Bank Atm, Ahmedabad-382418</td>
+        			<td> +919974630880
+</td>
+    		</tr>
+    			<tr>
+        			<td>Shree Ganesh Motors</td>
+        			<td>Vastral</td>
+        			<td class="add">Nijanand Park, Opposite Maruti School, Amraiwadi Road, Vastral, Near Laxmi Decoration Mandap, Ahmedabad-382418</td>
+        			<td>+919998742928</td>
+    		</tr>
+    			<tr>
+        			<td>Khodal Auto Garrige And Service</td>
+        			<td>Vastral</td>
+        			<td class="add">: Vastral Road,Pranami Nagar,Near Umiya Complex, Ahmedabad-382418</td>
+        			<td>+919725530692</td>
+    		</tr>
+    			<tr>
+        			<td>Shree Bajrang Auto Care</td>
+        			<td>Vastral</td>
+        			<td class="add">6/7, Gopal Charan Complex, Nirant Char Rasta, Near Arpan School, Vastral Road, Mahadev Nagar, Vastral, Near Gurukrupa Fabrication Industries, Ahmedabad-382418</td>
+        			<td>+919909908648</td>
+    		</tr>
+    			<tr>
+        			<td>Shree Shakti Auto Services</td>
+        			<td>Vastral</td>
+        			<td class="add">Karnavati Complex, Opposite Maruti School, Amraiwadi Road, Vastral, Near Laxmi Decoration Mandap, Ahmedabad-382418</td>
+        			<td>+919998058949</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl29">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Ford Service</td>
+  			    <td>Panchvati</td>
+   				<td class="add">Behind Cargo Ford, C G Road, Panchavati, Near Ing Vyasa Bank, Near Dr Adeshra Palmist Centre, Ahmedabad-380006</td>
+   				<td> +91-79-26448212</td>
+    		</tr>
+    		<tr>
+        			<td>Cargo Motors Guj Private Limited</td>
+        			<td>Panchvati</td>
+        			<td class="add">Animesh, C G Road, Opposite Union Bank Of India, Panchavati, Ahmedabad-380006</td>
+        			<td> +91-79-66097000</td>
+    		</tr>
+    		<tr>
+        			<td>Hard Auto Care</td>
+        			<td>Panchvati</td>
+        			<td class="add">17,Venunad Row House,Panchvati,Opp White House, Ahmedabad-380006</td>
+        			<td>+919824000222</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl30">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Aashit Auto</td>
+  			    <td>Paldi</td>
+   				<td class="add">1,Shalin Complex,Fatehpura,Paldi,Opp Police Chowky, Ahmedabad-380009</td>
+   				<td> +91-79-26644749</td>
+    		</tr>
+    		<tr>
+        			<td>Mayur Automobiles</td>
+        			<td>Paldi</td>
+        			<td class="add">5,Muni,Shopping Centre,Nr N I D,Paldi, Ahmedabad-380007</td>
+        			<td> +91-79-26587653</td>
+    		</tr>
+    		<tr>
+        			<td>Haresh Automobiles</td>
+        			<td>Paldi</td>
+        			<td class="add">Mahalaxmi Cross Road,Paldi, Ahmedabad-380007
+</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Varsha Auto Care</td>
+        			<td>Paldi</td>
+        			<td class="add">C/1-6,Udaybhanu Shopping Centre,Fathenagar,Paldi,Opp Ankur School, Ahmedabad-380007</td>
+        			<td>+919825513800</td>
+    		</tr>
+    		<tr>
+        			<td>Shreenath Auto Repairing</td>
+        			<td>Paldi</td>
+        			<td class="add">Nanad Kishor Complex, Chandengar Paldi, Narayan Nagar Road, Near Pooja Selection, Ahmedabad-380007</td>
+        			<td> +91-79-26633199</td>
+    		</tr>
+    		<tr>
+        			<td>Jayant Auto Cent</td>
+        			<td>Paldi</td>
+        			<td class="add">4,Mahalaxmi Char Rasta,Paldi,Opp A V Shopping Center, Ahmedabad-380007
+</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Anoop Automobiles</td>
+        			<td>Paldi</td>
+        			<td class="add">14,Paldi Shopping,Fatehnagar,Paldi,Opp Ankur School, Ahmedabad-380007
+</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Aman Auto Service Station</td>
+        			<td>Paldi</td>
+        			<td class="add">563/A,Hariraj,Khodiyar Chowk,Paldi, Ahmedabad-380000</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Mistry Automobiles</td>
+        			<td>Paldi</td>
+        			<td class="add"> 2b,Dalal Apartment,Vikas Gruh Road,Paldi,Nr Ashoknagar Bus Stand, Nr Ashoknagar Bus Stand, Ahmedabad-380007</td>
+        			<td>+91-79-26644878</td>
+    		</tr>
+    		<tr>
+        			<td>Deep Auto Repairing</td>
+        			<td>Paldi</td>
+        			<td class="add"> G - 8, Mahavir Tower, Opposite H P Petrol Pump, Mahalaxmi Cross Road, Near Ghanshyam Medical Stores, Ahmedabad-380006</td>
+        			<td>+91-79-26581044</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl31">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Shah Auto Care</td>
+  			    <td>S.G Highway</td>
+   				<td class="add">Sola Road,Scince City Road,S G Highway, Ahmedabad-380060</td>
+   				<td> +919825092630/td>
+    		</tr>
+    		<tr>
+        			<td>Arbuda Motors</td>
+        			<td>S.G Highway</td>
+        			<td class="add">Opp Karnavati Club,Karnavati Complex,S G Highway, Ahmedabad-380009</td>
+        			<td>+919825245263</td>
+    		</tr>
+    		<tr>
+        			<td>Radhe Automobiles</td>
+        			<td>S.G Highway</td>
+        			<td class="add">Opposite Perd, Near Sola Bridge Corner, S G Highway, Thaltej, Near Maruti Stone & Granite, Ahmedabad-380059</td>
+        			<td>+91-79-65426600</td>
+    		</tr>
+    		<tr>
+        			<td>J K Automobiles</td>
+        			<td>S.G Highway</td>
+        			<td class="add"> J K Automobiles,S G Highway,Opp Ramdev Masala Fectory, Ahmedabad-380060</td>
+        			<td> +919898033281</td>
+    		</tr>
+    		<tr>
+        			<td>Davda Sales And Serice Shi Auto Parts</td>
+        			<td>S.G Highway</td>
+        			<td class="add">B - 5, Gajanand Complex, Sarkhej Sanand Cross Road, S G Highway, Near Hotel Milan, Near Shreeji Tyres, Ahmedabad-382210</td>
+        			<td> +919825229506</td>
+    		</tr>
+    		<tr>
+        			<td>Umiya Service Center & Automobiles</td>
+        			<td>S.G Highway</td>
+        			<td class="add">Near Sola Over Bride, S G Highway, Sarkhej - Gandhi Nagar Hwy, Near Popular Wheelers India Pvt Ltd, Ahmedabad-380054</td>
+        			<td> +919426767225</td>
+    		</tr>
+    		<tr>
+        			<td>Excellence Car Studio Private Limited</td>
+        			<td>S.G Highway</td>
+        			<td class="add">S G Highway,Behind Amar Complex,Near Navjeevan Hotel, Ahmedabad-380015</td>
+        			<td>+919879016503</td>
+    		</tr>
+    		<tr>
+        			<td>Manim Automobiles</td>
+        			<td>S.G Highway</td>
+        			<td class="add"> Akshat,S G Highway,Nr Cargo Motors, Ahmedabad-380054
+</td>
+        			<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Lovato Bajrang Auto Gas</td>
+        			<td>S.G Highway</td>
+        			<td class="add">Near Gurarat High Court, Solk, A Over Bridge, S G Highway, Near Bhoomidham Ghar Mandir, Ahmedabad-380060</td>
+        			<td> +919825082471</td>
+    		</tr>
+
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl32">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">National Auto Repairers</td>
+  			    <td>Sarangpur</td>
+   				<td class="add">1876/A,Rambhavan,Dolat Khana,Sarangpur, Ahmedabad-380001</td>
+   				<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Koshti Cars</td>
+        			<td>Sarangpur</td>
+        			<td class="add"> C/36,Basement,Shree Gantakarm Market,Sarangpur, Ahmedabad-380002</td>
+        			<td>+919825023000</td>
+    		</tr>
+    		<tr>
+        			<td>Jayhind Tyers</td>
+        			<td>Sarangpur</td>
+        			<td class="add">Lokhd Bazar, Sarangpur, Outside Sarangpur Gate, Outside Sarangpur Gate, Ahmedabad-380002</td>
+        			<td>+919898821560</td>
+    		</tr>
+    		<tr>
+        			<td>Champion Tyre Service</td>
+        			<td>Sarangpur</td>
+        			<td class="add">A 908/42, Opposite New Cloth Market, Sarangpur, Ahmedabad-380002</td>
+        			<td>+91-79-22144192</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl33">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Gujarat Auto Repairing</td>
+  			    <td>Shahibaug</td>
+   				<td class="add">D/171, Shahibaug, Near Three Garden Corner, Near Patel Tours And Travels, Ahmedabad-380004</td>
+   				<td> +919925721049</td>
+    		</tr>
+    		<tr>
+        			<td>Shahi Automobiles</td>
+        			<td>Shahibaug</td>
+        			<td class="add"> Near Shahibaug Underbridge, Shahibaug, Near A Star Cloth Shop, Near Fatima Isha Hospital, Ahmedabad-380004</td>
+        			<td> +919824141807</td>
+    		</tr>
+    		<tr>
+        			<td>Gim Autombiles</td>
+        			<td>Shahibaug</td>
+        			<td class="add">Railway Crossing Road, Opposite Musasuwa Kabrastan, Behind Swaminarayan Temple, Shahibaug, Ahmedabad-380004</td>
+        			<td>+919726302228</td>
+    		</tr>
+    		<tr>
+        			<td>Shakti Vijay Auto Works</td>
+        			<td>Shahibaug</td>
+        			<td class="add">C C/2/402 Spectrum Tower, Opposite Poli - Ce Station, Shahibaug, Near Ravindra Enterprises, Ahmedabad-380004</td>
+        			<td>+91-79-25622952</td>
+    		</tr>
+    		<tr>
+        			<td>Jai Durga Motors</td>
+        			<td>Shahibaug</td>
+        			<td class="add">Dafnala Road,Shahibaug,Nr Paradise Flats, Ahmedabad-380004</td>
+        			<td> +91-79-22868246</td>
+    		</tr>
+    		<tr>
+        			<td>New Star Rikshaw Body Repairing</td>
+        			<td>Shahibaug</td>
+        			<td class="add">Hajipura Garden, Near Monariya Travels, Near Chittaliya Brothers, Ahmedabad-380004</td>
+        			<td> +919998241533</td>
+    		</tr>
+    		<tr>
+        			<td>Hari Om Automobiles</td>
+        			<td>Shahibaug</td>
+        			<td class="add">Vitthalnagar,Char Rasta,Shahibaug,Opp Jay Complex, Ahmedabad-380004</td>
+        			<td> +919420304388</td>
+    		</tr>
+    		<tr>
+        			<td>Hari Om Auto Garage</td>
+        			<td>Shahibaug</td>
+        			<td class="add">Shukam Mall, Near Rajasthan Hospital, Shahibaug, Near Blue Lagoon Family Salon, Ahmedabad-380004</td>
+        			<td> +919723003059</td>
+    		</tr>
+    		<tr>
+        			<td>Krishna Autoelectric Centre</td>
+        			<td>Shahibaug</td>
+        			<td class="add">Vitthal Nagar,Char Rasta,Shahibaug,Opp Navinchandra Park, Ahmedabad-380004
+</td>
+        			<td>+919998447558</td>
+    		</tr>
+    		<tr>
+        			<td>Navjyot Service Centre </td>
+        			<td>Shahibaug</td>
+        			<td class="add">L 5, Vrundavan Colony, Behind Divyang Park, Dafnala Road, Shahibaug, Ahmedabad-380004</td>
+        			<td> +91-79-22866900</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl34">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Maa Meldi Motors</td>
+  			    <td>Thaltej</td>
+   				<td class="add">12, Sanskar Tower, Opposite Mandar Bunglow, Behind Someshwar Bunglow, Gulab Tower Road, Thaltej, Near New Vishal Provision Road, Ahmedabad-380054</td>
+   				<td> +91-79-27490597</td>
+    		</tr>
+    		<tr>
+        			<td>Sunset Automobiles</td>
+        			<td>Thaltej</td>
+        			<td class="add">Hebatpur Cross Road, Near Sola Bridge Corner, S G Highway, Thaltej, Near Maruti Stone & Granite, Ahmedabad-38005</td>
+        			<td> +919428047600</td>
+    		</tr>
+    		<tr>
+        			<td>Kailash Motors</td>
+        			<td>Thaltej</td>
+        			<td class="add">Shop No 3, Morya Flat, Beside Sanskar Tower, Opposite Cambay Grand, Gulab Tower Road, Thaltej, Near New Vishal Provision Road, Ahmedabad-380054</td>
+        			<td>+919898743770</td>
+    		</tr>
+    		<tr>
+        			<td>K M Auto Track</td>
+        			<td>Thaltej</td>
+        			<td class="add"> 2, Avishkar Shopping Centre, Sudhara Circle, Sun & Step Club Road, Thaltej, Ahmedabad-380054</td>
+        			<td>+919824240212</td>
+    		</tr>
+    		<tr>
+        			<td>Radhe Automobiles</td>
+        			<td>Thaltej</td>
+        			<td class="add">Opposite Perd, Near Sola Bridge Corner, S G Highway, Thaltej, Near Maruti Stone & Granite, Ahmedabad-380059</td>
+        			<td>+91-79-65426600</td>
+    		</tr>
+    		<tr>
+        			<td>Shree Bramhani Auto Care</td>
+        			<td>Thaltej</td>
+        			<td class="add">20,Sprabhat Complex,Thaltej,Nr Someswar Bungalows Gulab Tower, Ahmedabad-380054</td>
+        			<td>+919824030170</td>
+    		</tr>
+    		<tr>
+        			<td>Laxmi Motors</td>
+        			<td>Thaltej</td>
+        			<td class="add">Grond Floor, Laxmi Motors, S G Highway, Thaltej, Nr Sola Over Bridge, Near Maruti Stone & Granite, Ahmedabad-380059</td>
+        			<td>+919427026272</td>
+    		</tr>
+    		<tr>
+        			<td>Ambica Auto Services</td>
+        			<td>Thaltej</td>
+        			<td class="add">O 2 3rd Floor, Shivangi Apartment, S, Opposite T V Tower, Thaltej, Ahmedabad-380052</td>
+        			<td> +91-79-27491531</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+    	<div id="tbl35">
+			<table class="table" border="1" id="tb_A">
+  			<thead class="thead-dark">
+   			 <tr>
+    		  	<th scope="col">Name</th>
+      			<th scope="col">Area</th>
+     			<th scope="col">Address</th>
+    		    <th scope="col">Phone_No</th>
+    		</tr>
+  			</thead>
+  			<tbody>
+    		<tr>
+   			    <td scope="row">Star Auto Care</td>
+  			    <td>Vastrapur</td>
+   				<td class="add">Shop 2,Veda Apartment & Shops,Satellite Mansi Cross Road,Vastrapur, Ahmedabad-380015</td>
+   				<td>-</td>
+    		</tr>
+    		<tr>
+        			<td>Avakar Motors</td>
+        			<td>Vastrapur</td>
+        			<td class="add">38, Management Enclave, Vastrapur Road, Vastrapur, Ahmedabad-380015</td>
+        			<td>+919825014914</td>
+    		</tr>
+    		<tr>
+        			<td>Pruthvi Motors</td>
+        			<td>Vastrapur</td>
+        			<td class="add"> Shop No1,Gr Floor,Management Enclave,Vastrapur,Vastrapur Lakenehrupark, Ahmedabad-380015</td>
+        			<td> +91-79-26749247</td>
+    		</tr>
+    		<tr>
+        			<td>Jay Gujarat Auto Mobiles</td>
+        			<td>Vastrapur</td>
+        			<td class="add">29, Management Enclave, Opposite Indraprasth Bunglows, Nehru Park, Vastrapur, Near Ashray Enterprise, Ahmedabad-380015</td>
+        			<td> +919825182867</td>
+    		</tr>
+    		<tr>
+        			<td>Yash Auto</td>
+        			<td>Vastrapur</td>
+        			<td class="add">13, Management Enclave, Nehru Park, Vastrapur Road, Vastrapur, Ahmedabad-380015</td>
+        			<td> +919428100489</td>
+    		</tr>
+    		<tr>
+        			<td>Trident Automobiles</td>
+        			<td>Vastrapur</td>
+        			<td class="add">Near Kalyan Tower, Behind Vastrapur Lake View Apartment, Vastrapur Lake Road, Vastrapur, Ahmedabad-380052</td>
+        			<td>+91-79-26301874</td>
+    		</tr>
+    		<tr>
+        			<td>Jyothi Auto Center</td>
+        			<td>Vastrapur</td>
+        			<td class="add">Himanshu Vidhayalay,Vastrapur Main Road,Vastrapur, Ahmedabad-380005</td>
+        			<td> +919825630312</td>
+    		</tr>
+    		<tr>
+        			<td>Gurukrupa Auto Service Centre</td>
+        			<td>Vastrapur</td>
+        			<td class="add">G - 4, Panchdeep Shopping Center, Vastrapur, Opposite Bank Of India, Near New Prayosha Ladies Tailor, Ahmedabad-380015</td>
+        			<td> +919909894762</td>
+    		</tr>
+    		<tr>
+        			<td>The Complete Car Care Centre</td>
+        			<td>Vastrapur</td>
+        			<td class="add">8,Management Enclave,Nehru Park,Vastrapur, Ahmedabad-380015</td>
+        			<td> +919824015967</td>
+    		</tr>
+    		<tr>
+        			<td>Autocop Service Center</td>
+        			<td>Vastrapur</td>
+        			<td class="add">F-5,Chinmay Crystal Tower,Vastrapur,Opp Vastrapur Lake, Ahmedabad-380015</td>
+        			<td>-</td>
+    		</tr>
+    		</tbody>
+    		</table>
+    	</div>
+		</div>
+	</p>
+{% endblock %}

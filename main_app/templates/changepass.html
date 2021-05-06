@@ -1,0 +1,90 @@
+{% load static %} 
+<html>
+<head>
+<style>
+    #a1
+    {
+        
+        margin-top:130px;
+        margin-left:480px;
+
+    }
+    span
+    {
+        color: red;
+    }
+</style>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+     crossorigin="anonymous"></script> 
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> 
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+ 
+ 
+ <!------ Include the above in your HEAD tag ----------> 
+ 
+ 
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> 
+ <link href="{% static '/doctorfinder/login.css' %}" rel="stylesheet"> 
+ 
+ 
+ 
+ <div class="container" id="a1"> 
+     <div class="row"> 
+         <div class="col-sm-4"> 
+             <div class="card"> 
+                 <article class="card-body"> 
+                     <h4 class="card-title text-center mb-4 mt-1">Forgot Password</h4> 
+                     <hr> 
+                     {% if message %} 
+                     <p class="text-danger text-center">{{message}}</p> 
+                     {% endif %} 
+                     <form method="POST" action="{% url 'changepass' %}"> 
+                         {% csrf_token %} 
+                          
+                         <div class="form-group"> 
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="otp" class="form-control" placeholder="OTP" type="number" name="otp" id='potp'> 
+                                 
+                                 
+                             </div>
+                             <span id="c_otp_err"></span>
+                             <br>
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="pass" class="form-control" placeholder="Password" type="password" name="pass" id='c_pass'> 
+                                 
+                             </div>
+                             <span id="c_pass_err"></span><br>
+                             <div class="input-group"> 
+                                 <div class="input-group-prepend"> 
+                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span> 
+                                 </div> 
+                                 <input name="cpass" class="form-control" placeholder="Confirm Password" type="password" name="cpass" id='c_cpass'> 
+                                 
+                             </div>
+                             <span id="c_cpass_err"></span>
+                             <br>  
+                        </div>  
+                        
+                         <div class="form-group"> 
+                             <button type="submit" class="btn btn-primary btn-block" id="pass_sub"> Reset </button> 
+                             {% if message %}
+                            <p class="text-danger text-center">{{message}}</p>
+                                {% endif %}
+                         </div>  
+                          
+                          
+                     </form> 
+                 </article> 
+             </div>  
+         </div>  
+     </div>  
+ </div> 
+ <script src="{% static '/main_app/js/changepass_valid.js' %}"></script>
+</html>
